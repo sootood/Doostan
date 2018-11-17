@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/nav_about"
+        android:icon="@mipmap/ic_launcher"
+        android:title="درباره ما" />
+
+    <item
+        android:id="@+id/nav_signUp_co"
+        android:icon="@drawable/ic_worker"
+        android:title="ثبت نام نمایندگی" />
+
+
+    <item
+        android:id="@+id/nav_call"
+        android:icon="@drawable/ic_settings_phone_black_24dp"
+        android:title="ارتباط با پشتیبانی" />
+    <item
+        android:id="@+id/nav_recently"
+        android:icon="@drawable/ic_description_black_24dp"
+        android:title="آخرین سفارش"
+        />
+
+    <!--<item-->
+        <!--android:id="@+id/nav_logout"-->
+        <!--android:title="" />-->
+
+    <!--<group android:checkableBehavior="single">-->
+        <!--<item-->
+            <!--android:id="@+id/nav_camera"-->
+            <!--android:icon="@drawable/ic_menu_camera"-->
+            <!--android:title="Import" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_gallery"-->
+            <!--android:icon="@drawable/ic_menu_gallery"-->
+            <!--android:title="Gallery" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_slideshow"-->
+            <!--android:icon="@drawable/ic_menu_slideshow"-->
+            <!--android:title="Slideshow" />-->
+        <!--<item-->
+            <!--android:id="@+id/nav_manage"-->
+            <!--android:icon="@drawable/ic_menu_manage"-->
+            <!--android:title="Tools" />-->
+    <!--</group>-->
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

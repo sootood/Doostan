@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--<TextView--><!--android:id="@+id/title"--><!--android:text="پلاک"--><!--android:textAlignment="center"--><!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"--><!--android:layout_margin="8dp"--><!--android:layout_width="match_parent"--><!--android:layout_height="wrap_content" />-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@color/transparent">
+
+    <ImageButton
+        android:id="@+id/closeImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" />
+
+    <com.github.chrisbanes.photoview.PhotoView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/imageBig"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/closeImage"
+        android:layout_centerInParent="true"
+        android:padding="10dp" />
+</RelativeLayout>

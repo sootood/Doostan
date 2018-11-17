@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrllV"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<LinearLayout
+    android:layout_marginTop="20dp"
+    android:orientation="vertical"
+    android:paddingBottom="30dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_about__doostan"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="40dp"
+    tools:context="com.jabizparda.cartools.About_Doostan"
+    tools:showIn="@layout/activity_about__doostan">
+
+    <TextView
+        android:id="@+id/title_about"
+        android:padding="10dp"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="صنایع خودرویی دوستان"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <com.bluejamesbond.text.DocumentView
+        xmlns:ext="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/longText"
+        android:textDirection="ltr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ext:documentView_antialias="true"
+        ext:documentView_cacheConfig="auto_quality"
+        ext:documentView_lineHeightMultiplier="2.0"
+        ext:documentView_maxLines="100"
+        ext:documentView_offsetX="10dp"
+        ext:documentView_offsetY="10dp"
+        ext:documentView_insetPadding="10dp"
+        ext:documentView_insetPaddingBottom="10dp"
+        ext:documentView_insetPaddingLeft="10dp"
+        ext:documentView_insetPaddingRight="10dp"
+        ext:documentView_insetPaddingTop="10dp"
+        ext:documentView_reverse="true"
+        ext:documentView_textFormat="formatted"
+        ext:documentView_textAlignment="justified"
+        ext:documentView_textColor="@color/dark_gray"
+        ext:documentView_textSize="12sp"
+        />
+
+</LinearLayout>
+    </ScrollView>

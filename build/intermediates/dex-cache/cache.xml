@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_6f92a1d0ed50d76557b959efc0b123606066c4c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-10.0.1_f14429604ec75d7b2d4f009995465aab186834d6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\gson-2.5_910ad1793717743be18279fca1a6a34cdd2e16d2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.github.arimorty\floatingsearchview\2.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="679c36376300693ca1e2c25e50602ce01b183965">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.github.arimorty-floatingsearchview-2.1.1_14d72845a5afc4ae848936e6b5d4178a6e017107.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="756f6297eef79784f5e356dcd4f39865028b2bd0">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-10.0.1_815b942a96426b87ee985d690a1750ec402f5e0f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.github.aakira\expandable-layout\1.4.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b8ba0b9f0aa49a9180676e72ad6767473b15f74a">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.github.aakira-expandable-layout-1.4.2_2d5b5e9b3188adc4edfc56c2bef769bef8adf073.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\android.arch.persistence.room\support-db-impl\1.0.0-alpha5\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="73b599658b6d04643cc81d810fe7a6a96e4b2b5b">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\android.arch.persistence.room-support-db-impl-1.0.0-alpha5_6e9bd97fa651d90c017de574ab6a2857175731a8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-25.3.0_897cf69e6411e62155421af2835f5bdf4b154fa0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="c5d103b270b3f3b50d8e6b44aa8e068b0de33426">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-25.3.0_389b9d6d18a3603fa51160befed97e480f4ab373.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="486371f97baad8e607f332f20fee1d3dd00a731a">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-iid-10.0.1_25846b1503b5f705e06c882a6d83345d90211308.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0-alpha5\16bbceb3231045909d9b2d19758c57a30831ce9f\common-1.0.0-alpha5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="16bbceb3231045909d9b2d19758c57a30831ce9f">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\common-1.0.0-alpha5_9b5c2936879ba1c49a44375e9c248f345bfde95a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.davemorrissey.labs\subsampling-scale-image-view\3.10.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="44cc1a555a91da6de302c130aa96521a836277c3">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.davemorrissey.labs-subsampling-scale-image-view-3.10.0_44a828b8b8b241bd3e8d272997cf3f1d3be97feb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-25.3.0_623da4c0b24fbde4bb3bd09f03a068ee33d070fe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\android.arch.lifecycle\runtime\1.0.0-alpha5\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6ce259d1bd16f24cf3aaa40345082e01b2d21365">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\android.arch.lifecycle-runtime-1.0.0-alpha5_05d9a5717c504a70c9612a44078a1acb2feeeacf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-ui-25.3.0_1554c542f631a8cc70da5c2a888f66b75e6266f1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\me.relex\circleindicator\1.2.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="1db6784d006818fee2591f13b0bf09ac31a3d49a">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\me.relex-circleindicator-1.2.2_e1aff7151f43332836829f78396ddae60cd3b033.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.koushikdutta.async\androidasync\2.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0772eec11be9e3803736882ae4bec4078986910e">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.koushikdutta.async-androidasync-2.2.1_a443e2cb463cb500405d4172a653095eb9d444b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\123\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha7\constraint-layout-solver-1.0.0-alpha7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="439eeb5ffd54cbd18db0a6aea471e8356f19fc36">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.0-alpha7_03788f0108c7fdcea7f043d0744907ab7f2a01d9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6addaba208e21c6da776d0ca75b6b23a6ccd5499">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-10.0.1_1a73baf43ff56a4d554feaeacd80e547b570cade.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0-alpha5\ef1ec521c95486fb256b3677a95c340ce9c49407\common-1.0.0-alpha5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ef1ec521c95486fb256b3677a95c340ce9c49407">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\common-1.0.0-alpha5_2323fca8b97bbac890049abfe0f098ab1955db95.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.makeramen\roundedimageview\2.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fbaffbfc2a42fce3718dc9f52182810ad332b0ec">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.makeramen-roundedimageview-2.3.0_db6fc8f1bd198a975285e5d4777860f4897c28f3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="433f4d6aa5f21f19552afe0e6c5eff0fedba73ad">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-10.0.1_329844a7e51193b7eb95d5b2a6c870f76dad69b6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.google.firebase\firebase-messaging\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4b17463c814bdc562fb0392fa3494063623a0904">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-messaging-10.0.1_4b548ddb2ef8bc4f4e73c67594111d714bf55f2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\android.arch.core\runtime\1.0.0-alpha5\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="af7033d1889f6d98ba978a9e26d9ae8d3333c4da">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\android.arch.core-runtime-1.0.0-alpha5_d6c2399159c2a98429ac059d73bcb5420c2f3e49.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-25.3.0_df5b1ed518802a3e48e57a70a4405079e061d5c0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.orhanobut\logger\2.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="f3da801940221b852f3a3ee82bfe2a10d39e4ffa">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.orhanobut-logger-2.1.1_0d5cbae739aedfa86baf720c14ee9fcd9c3a9db0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.koushikdutta.ion\ion\2.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="05e8375b2ec26e4508b2a745d5a0623ba95f9b49">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.koushikdutta.ion-ion-2.2.1_452a9b19df3019289a60b1c978dcad9a76962876.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.google.firebase\firebase-crash\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="de29a39f9260f88151b1ef453140e71c76b6c415">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-crash-10.0.1_09f4b1b5102290a4b42ad81e59eb81104e23c0ee.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\design\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-design-25.3.0_cabffdd03fafccb353b16dd25b4d3c2a3bffdc3b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-support-compat-25.3.0_76a15f2b15ded413ecbd8a7589385899eb4fb2e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.8.0\9bada650e1afe9c6174ddc0d113c1fce4dc26fe0\glide-3.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="9bada650e1afe9c6174ddc0d113c1fce4dc26fe0">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\glide-3.8.0_cf8fd1a1102d8f08ffcde4924a5408adb3639470.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\android.arch.lifecycle\extensions\1.0.0-alpha5\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="55114222f50b17afbaff18c30062c4b3c8ddd278">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\android.arch.lifecycle-extensions-1.0.0-alpha5_4b78a765e91fee6622178ad946e16cbe63b55a84.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-25.3.0_647c7823f1b1fa25d935f3e8b43316093e8f6305.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-support-media-compat-25.3.0_5b1deb1ce6a8524da5a8ae8d456cb6c5727136e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\123\AppData\Local\Android\sdk\extras\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.0_42931aa04cdd362af3232bece3f13d2c37c9414b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.jakewharton\butterknife\8.8.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6a2bcb61342d09fe9acf55c9daf63961c8866cc0">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.jakewharton-butterknife-8.8.1_d7dd59fe11de58355f914c0b3f82d1aa339234bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.github.ganfra\material-spinner\2.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="95284b568e56c31f30dedd1f4475f371a0823413">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.github.ganfra-material-spinner-2.0.0_6616c8305036acd991195a65f1944ca3999d2427.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\android.arch.persistence.room\runtime\1.0.0-alpha5\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2f6369061e3e8cde1528618dfdff8105e1742bf5">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\android.arch.persistence.room-runtime-1.0.0-alpha5_dbd0bd1b8593ed876f79af13a545fb5c060c455b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="518768f3200963fbfec652f498da2c9d39245234">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-support-core-utils-25.3.0_9e5f532019018e98494186c866630268c7896593.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\exifinterface\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="0b3a8df836c750e94bccb368add790cc6adf0b78">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-exifinterface-25.3.0_27c39d7be657d3caa028d5d614bb5f85048c085f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\devlight.io\navigationtabbar\1.2.5\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="dce3b09be94e30554913f3e3e537b3517478bfd7">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\devlight.io-navigationtabbar-1.2.5_24c8bf8e62f3fff946250f1c8fb87fd2a2b38032.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\10.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6116e0e7069de7fc259aac8e08b84f32c2038231">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-analytics-impl-10.0.1_7cf021d3d0c00a45e76aec9be0cae3a3f6fbcba8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.8.1\bc373fb6bc7bca3035041b924f158fd2b946ee8d\butterknife-annotations-8.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="bc373fb6bc7bca3035041b924f158fd2b946ee8d">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\butterknife-annotations-8.8.1_717fb056fb28e7283840de1ec4bbc768c66e3fd7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\eventbus-3.0.0_b1898d59407c1120d86dbee64a04159bc79d6f2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-25.3.0_5a34d964d1e8aa34e46bc89e84c2ac6566ae50f5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.github.linger1216\labelview\v1.1.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="97058cbc5e05e157c1d2bf365b861a83ddc8e820">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.github.linger1216-labelview-v1.1.2_08d4a81ff9c215610a42250748d34f54093e8885.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\android.arch.persistence.room\common\1.0.0-alpha5\da7c4f373e9a9e114fc3a12edcbb7bd7f8822b4b\common-1.0.0-alpha5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="da7c4f373e9a9e114fc3a12edcbb7bd7f8822b4b">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\common-1.0.0-alpha5_9417f9cae482fd647b0ec3eb8bfc63359bca5f80.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-25.3.0_636224dadfe9acc5f510afeee4611bfdb4ed1f0f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.bartoszlipinski\viewpropertyobjectanimator\1.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="1828dd75d357690efb2c5f4326804e2f7ad21f6c">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.bartoszlipinski-viewpropertyobjectanimator-1.2.0_cb84a98b5c322c366a1071d6e5aa700e2d5a312b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\android.arch.persistence.room\support-db\1.0.0-alpha5\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="35f961fae9306ee1f783eaf052f25c37dfc48a8a">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\android.arch.persistence.room-support-db-1.0.0-alpha5_592a99f3ecdf2e38e43a182c41250ff02b10b5b5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.github.chrisbanes\PhotoView\2.1.3\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="2115d9dd8708cb48e7481b1259ae9f00dc16a032">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.github.chrisbanes-PhotoView-2.1.3_f90cd26f0d974b4e166c95f7a7d75d0dbc1e2e16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.airbnb.android\lottie\2.1.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="bb1a5b58743fb97cd80b39d44655e12ea7b3236e">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.airbnb.android-lottie-2.1.2_c96a97fdc1b6e3dda36b56cbe5d926e0a82ae2fb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-alpha7\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="541a2ad68dc68aa49795821f8280b7624e6a0c9b">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support.constraint-constraint-layout-1.0.0-alpha7_81455bb3712425ff30047adf771f3340473476ca.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.android.support\transition\25.3.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.android.support-transition-25.3.0_da21c5f2a298bff3a4a0edbd3b812216302c558b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.github.bluejamesbond\textjustify-android\2.1.6\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="a298f4b67b4898200c47cfd4f5bf2f221c657766">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.github.bluejamesbond-textjustify-android-2.1.6_e9e93fc54ef615c2c84d086e0d7a74c808ebcdae.jar" />
+    </item>
+
+</items>

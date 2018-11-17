@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <!--<item-->
+        <!--android:id="@+id/taxis"-->
+        <!--android:title=""-->
+        <!--app:showAsAction="always"-->
+        <!--android:onClick="refresh"-->
+        <!--android:textSize="2sp"-->
+        <!--/>-->
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:icon="@mipmap/ic_launcher"
+        android:title="دوستان"
+        app:showAsAction="always" />
+
+
+
+
+</menu>

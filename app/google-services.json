@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "853655298782",
+    "firebase_url": "https://doostan-b89fb.firebaseio.com",
+    "project_id": "doostan-b89fb",
+    "storage_bucket": "doostan-b89fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853655298782:android:474d3b962f3d4e5d",
+        "android_client_info": {
+          "package_name": "com.jabizparda.cartools"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853655298782-ivb9he2tc6hqpgh63t81ksl91ek7jqr1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8_lSuKPzrC7Yd9fKXG0bBJFsdgt_BTCk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

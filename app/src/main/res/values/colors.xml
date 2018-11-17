@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#005e9a</color>
+    <color name="colorPrimaryDark">#373b56</color>
+    <color name="colorAccent">#19aa28</color>
+    <color name="colorAccentLight">#8e6699b9</color>
+    <color name="primeryLight">#78778a</color>
+    <color name="whaite">#fcfbfb</color>
+    <color name="blu_light">#2a98ec</color>
+    <color name="light_grey">#e9eaeb</color>
+    <color name="t_lg">#f9f9f9</color>
+    <color name="colorAccentTranse">#8119aa28</color>
+</resources>
