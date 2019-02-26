@@ -307,6 +307,29 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
                                             }
                                         }
                                     });
+                                    JsonObject jsonObjectDetail = new JsonObject();
+                                    jsonObjectDetail.addProperty("Array", l);
+                                    core.GetDetailGroup(jsonObjectDetail, new FutureCallback<JsonObject>() {
+                                        @Override
+                                        public void onCompleted(Exception e, JsonObject result) {
+                                            Logger.d(result);
+                                            if (result != null) {
+                                                yearDatas = new Gson().fromJson(result.get("data").getAsJsonArray(), new TypeToken<List<YearData>>() {
+                                                }.getType());
+                                                year = new String[yearDatas.size()];
+                                                for (int i = 0; i < yearDatas.size(); i++) {
+                                                    year[i] = Core.toPersianStatic(yearDatas.get(i).getYearName());
+                                                }
+
+                                            } else {
+                                                year = new String[1];
+                                                year[0] = "0";
+                                            }
+                                            final ArrayAdapter<String> adapterYear = new ArrayAdapter<String>(MainActivity.this, android.R.layout.simple_spinner_item, year);
+                                            spinner4.setAdapter(adapterYear);
+                                        }
+                                    });
+
                                 } else {
                                     JsonObject jsonObject = new JsonObject();
                                     jsonObject.addProperty("CarPk", 0);

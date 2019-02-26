@@ -3,30 +3,12 @@
 
     <item
         is-multidex="false"
-        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_6f92a1d0ed50d76557b959efc0b123606066c4c0.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\10.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
         sha1="eb0d830e3eabb9deb9ec44869cf7ac7ea1ad794c">
         <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-common-10.0.1_f14429604ec75d7b2d4f009995465aab186834d6.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
-        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\gson-2.5_910ad1793717743be18279fca1a6a34cdd2e16d2.jar" />
     </item>
     <item
         is-multidex="false"
@@ -93,15 +75,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0-alpha5\16bbceb3231045909d9b2d19758c57a30831ce9f\common-1.0.0-alpha5.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="16bbceb3231045909d9b2d19758c57a30831ce9f">
-        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\common-1.0.0-alpha5_9b5c2936879ba1c49a44375e9c248f345bfde95a.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.davemorrissey.labs\subsampling-scale-image-view\3.10.0\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -138,6 +111,15 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\jabiz\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha7\constraint-layout-solver-1.0.0-alpha7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="439eeb5ffd54cbd18db0a6aea471e8356f19fc36">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.0-alpha7_91b6f09804af8615bae16e424439b01841be86a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\me.relex\circleindicator\1.2.2\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -156,15 +138,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\123\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-alpha7\constraint-layout-solver-1.0.0-alpha7.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="439eeb5ffd54cbd18db0a6aea471e8356f19fc36">
-        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\constraint-layout-solver-1.0.0-alpha7_03788f0108c7fdcea7f043d0744907ab7f2a01d9.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\10.0.1\jars\classes.jar"
         jumboMode="false"
         optimize="true"
@@ -174,12 +147,12 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0-alpha5\ef1ec521c95486fb256b3677a95c340ce9c49407\common-1.0.0-alpha5.jar"
+        jar="C:\Users\jabiz\.gradle\caches\modules-2\files-2.1\android.arch.lifecycle\common\1.0.0-alpha5\16bbceb3231045909d9b2d19758c57a30831ce9f\common-1.0.0-alpha5.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="ef1ec521c95486fb256b3677a95c340ce9c49407">
-        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\common-1.0.0-alpha5_2323fca8b97bbac890049abfe0f098ab1955db95.jar" />
+        sha1="16bbceb3231045909d9b2d19758c57a30831ce9f">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\common-1.0.0-alpha5_187d6786bad59278edc42eee7d6ec91c94a4e61e.jar" />
     </item>
     <item
         is-multidex="false"
@@ -207,6 +180,15 @@
         revision="26.0.2"
         sha1="4b17463c814bdc562fb0392fa3494063623a0904">
         <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.google.firebase-firebase-messaging-10.0.1_4b548ddb2ef8bc4f4e73c67594111d714bf55f2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jabiz\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\picasso-2.5.2_53afc03db42dc30dd0410b23839447dba932c0e6.jar" />
     </item>
     <item
         is-multidex="false"
@@ -273,12 +255,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.8.0\9bada650e1afe9c6174ddc0d113c1fce4dc26fe0\glide-3.8.0.jar"
+        jar="C:\Users\jabiz\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="9bada650e1afe9c6174ddc0d113c1fce4dc26fe0">
-        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\glide-3.8.0_cf8fd1a1102d8f08ffcde4924a5408adb3639470.jar" />
+        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\eventbus-3.0.0_6d8ec09443dbbb22f52d04dd13ba2b369ea1e4ef.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jabiz\.gradle\caches\modules-2\files-2.1\android.arch.core\common\1.0.0-alpha5\ef1ec521c95486fb256b3677a95c340ce9c49407\common-1.0.0-alpha5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="ef1ec521c95486fb256b3677a95c340ce9c49407">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\common-1.0.0-alpha5_5c2aeaba9933c45036c4235edc1cb145b60cc4de.jar" />
     </item>
     <item
         is-multidex="false"
@@ -309,12 +300,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\123\AppData\Local\Android\sdk\extras\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
+        jar="C:\Users\jabiz\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
-        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.0_42931aa04cdd362af3232bece3f13d2c37c9414b.jar" />
+        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\gson-2.5_aef54dd3d011812cea4ccf573af92cb67ca96575.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jabiz\.gradle\caches\modules-2\files-2.1\android.arch.persistence.room\common\1.0.0-alpha5\da7c4f373e9a9e114fc3a12edcbb7bd7f8822b4b\common-1.0.0-alpha5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="da7c4f373e9a9e114fc3a12edcbb7bd7f8822b4b">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\common-1.0.0-alpha5_f09888bbad0daffa2d00c065c0a6ac7dda7c4204.jar" />
     </item>
     <item
         is-multidex="false"
@@ -342,6 +342,15 @@
         revision="26.0.2"
         sha1="2f6369061e3e8cde1528618dfdff8105e1742bf5">
         <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\android.arch.persistence.room-runtime-1.0.0-alpha5_dbd0bd1b8593ed876f79af13a545fb5c060c455b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jabiz\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.8.1\bc373fb6bc7bca3035041b924f158fd2b946ee8d\butterknife-annotations-8.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.2"
+        sha1="bc373fb6bc7bca3035041b924f158fd2b946ee8d">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\butterknife-annotations-8.8.1_b1afd84a3bdff5fa2a34de42e13d42d3479ddd75.jar" />
     </item>
     <item
         is-multidex="false"
@@ -381,21 +390,21 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\com.jakewharton\butterknife-annotations\8.8.1\bc373fb6bc7bca3035041b924f158fd2b946ee8d\butterknife-annotations-8.8.1.jar"
+        jar="C:\Users\jabiz\AppData\Local\Android\Sdk\extras\m2repository\com\android\support\support-annotations\25.3.0\support-annotations-25.3.0.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="bc373fb6bc7bca3035041b924f158fd2b946ee8d">
-        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\butterknife-annotations-8.8.1_717fb056fb28e7283840de1ec4bbc768c66e3fd7.jar" />
+        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\support-annotations-25.3.0_83a2f33ab6673a1a4b12d8b481ace6ce45878b1d.jar" />
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\org.greenrobot\eventbus\3.0.0\ddd99896e9569eaababbe81b35d80e1b91c4ad85\eventbus-3.0.0.jar"
+        jar="C:\Users\jabiz\.gradle\caches\modules-2\files-2.1\com.github.bumptech.glide\glide\3.8.0\9bada650e1afe9c6174ddc0d113c1fce4dc26fe0\glide-3.8.0.jar"
         jumboMode="false"
         optimize="true"
         revision="26.0.2"
-        sha1="ddd99896e9569eaababbe81b35d80e1b91c4ad85">
-        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\eventbus-3.0.0_b1898d59407c1120d86dbee64a04159bc79d6f2a.jar" />
+        sha1="9bada650e1afe9c6174ddc0d113c1fce4dc26fe0">
+        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\glide-3.8.0_3c9fcaf43076dbf27b0deb9cbd779500ac367543.jar" />
     </item>
     <item
         is-multidex="false"
@@ -414,15 +423,6 @@
         revision="26.0.2"
         sha1="97058cbc5e05e157c1d2bf365b861a83ddc8e820">
         <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\com.github.linger1216-labelview-v1.1.2_08d4a81ff9c215610a42250748d34f54093e8885.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\123\.gradle\caches\modules-2\files-2.1\android.arch.persistence.room\common\1.0.0-alpha5\da7c4f373e9a9e114fc3a12edcbb7bd7f8822b4b\common-1.0.0-alpha5.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="26.0.2"
-        sha1="da7c4f373e9a9e114fc3a12edcbb7bd7f8822b4b">
-        <dex dex="E:\firstrepo\firstrepo\firstrepo\app\build\intermediates\pre-dexed\debug\common-1.0.0-alpha5_9417f9cae482fd647b0ec3eb8bfc63359bca5f80.jar" />
     </item>
     <item
         is-multidex="false"

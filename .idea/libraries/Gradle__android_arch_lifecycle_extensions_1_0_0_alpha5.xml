@@ -5,8 +5,6 @@
       <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/android.arch.lifecycle/extensions/1.0.0-alpha5/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.lifecycle/extensions/1.0.0-alpha5/7a9b0a1a55086f8351cf96afebb11ef6d91e21d4/extensions-1.0.0-alpha5-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

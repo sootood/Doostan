@@ -30,6 +30,7 @@ import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -208,8 +209,8 @@ public class MaintenceActivity extends HappyCompatActivity {
 
     public void adaptMaintence() {
         JsonObject jsonObject = new JsonObject();
-        jsonObject.addProperty("Array", code == null ? "" : code);
-        jsonObject.addProperty("ArrayGroup", codeTypeCar == null ? "" : codeTypeCar);
+        jsonObject.addProperty("Array", (code == null) ? "" : code);
+        jsonObject.addProperty("ArrayGroup", (codeTypeCar == null) ? "" : codeTypeCar);
         jsonObject.addProperty("ArrayDetailGroup", year == null ? "" : year);
         jsonObject.addProperty("FirebaseId", String.valueOf(FirebaseInstanceId.getInstance().getToken()));
         Logger.json(jsonObject.toString());
@@ -225,6 +226,10 @@ public class MaintenceActivity extends HappyCompatActivity {
                             if (result.get("data").getAsJsonArray().get(0).getAsJsonObject().has("fldTitel")) {
                                 JsonArray array = ((JsonObject) result).get("data").getAsJsonArray();
                                 Log.i("size", String.valueOf(array.size()));
+                                if (array.size() == 1) {
+                                    showProgress(false);
+                                    showToast(MaintenceActivity.this, "محصولی برای جستجوی شما موجود نیست.");
+                                }
                                 for (int i = 1; i < (array).size(); i++) {
                                     JsonObject object = (array).get(i).getAsJsonObject();
                                     naqsheDatas.add(new Gson().fromJson(object, NaqsheSokhtData.class));
@@ -270,13 +275,18 @@ public class MaintenceActivity extends HappyCompatActivity {
 
         });
         if (codeTypeCar != null) {
-            if (!codeTypeCar.equals("4"))
-                rVMAitence.setAdapter(adaptor);
-            else{
+            if (!codeTypeCar.equals("4")) {
+                if (code.equals("0") && codeTypeCar.equals("0"))
+                    rVMAitence.setAdapter(naqsheadaptor);
+                else
+                    rVMAitence.setAdapter(adaptor);
+            } else {
                 if (code.equals("*"))
                     rVMAitence.setAdapter(adaptor);
                 else
                     rVMAitence.setAdapter(naqsheadaptor);
+
+
             }
         } else {
             rVMAitence.setAdapter(adaptor);
@@ -382,7 +392,7 @@ public class MaintenceActivity extends HappyCompatActivity {
                         showProgress(false);
 //                       EventBus.getDefault().post(new EventGoBackToMain());
                         showToast(MaintenceActivity.this, "لیست سفارش خود را از منو مشاهده کنید.");
-                        Intent intent = new Intent(MaintenceActivity.this, MainActivity.class);
+                        Intent intent = new Intent(MaintenceActivity.this, Basket.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                         startActivity(intent);
                         finish();
@@ -403,16 +413,17 @@ public class MaintenceActivity extends HappyCompatActivity {
     public void showGetCountDialog(final MaintenceDataSAvingVErsion data) {
         View view = getLayoutInflater().inflate(R.layout.dialog_number, null);
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.CustomDialog);
-        final TextView counterText = (TextView) view.findViewById(R.id.textCount);
-        final int[] number = {Integer.valueOf(counterText.getText().toString())};
+        final EditText counterText = (EditText) view.findViewById(R.id.textCount);
+        counterText.setText(Core.toPersianStatic("1"));
         view.findViewById(R.id.minesBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (number[0] == 1) {
+                if (Integer.valueOf(counterText.getText().toString()) == 1) {
                     counterText.setText(Core.toPersianStatic("1"));
                 } else {
-                    number[0] -= 1;
-                    counterText.setText(Core.toPersianStatic(String.valueOf(number[0])));
+                    int number = Integer.valueOf(counterText.getText().toString());
+                    number -= 1;
+                    counterText.setText(Core.toPersianStatic(String.valueOf(number)));
                 }
             }
         });
@@ -420,14 +431,15 @@ public class MaintenceActivity extends HappyCompatActivity {
             @Override
             public void onClick(View v) {
                 Logger.d("plus");
-                number[0] += 1;
-                counterText.setText(Core.toPersianStatic(String.valueOf(number[0])));
+                int number = Integer.valueOf(counterText.getText().toString());
+                number += 1;
+                counterText.setText(Core.toPersianStatic(String.valueOf(number)));
             }
         });
         view.findViewById(R.id.doneBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                data.setCounterMaintence(number[0]);
+                data.setCounterMaintence(Integer.valueOf(counterText.getText().toString()));
                 alertCount.dismiss();
             }
         });

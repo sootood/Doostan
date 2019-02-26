@@ -5,8 +5,6 @@
       <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/android.arch.persistence.room/support-db-impl/1.0.0-alpha5/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.persistence.room/support-db-impl/1.0.0-alpha5/423b23b4188a4f84c34f85f1579d305581567f17/support-db-impl-1.0.0-alpha5-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

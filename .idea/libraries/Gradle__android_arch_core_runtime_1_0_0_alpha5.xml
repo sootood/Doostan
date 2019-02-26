@@ -5,8 +5,6 @@
       <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/android.arch.core/runtime/1.0.0-alpha5/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/android.arch.core/runtime/1.0.0-alpha5/3665e2cfffc793affb456ae8d1b2c8cddf11672d/runtime-1.0.0-alpha5-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>

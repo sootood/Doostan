@@ -8,8 +8,18 @@ android {
         minSdkVersion 17
         targetSdkVersion 26
         versionCode 2
-        versionName "1.1.2"
+        versionName "1.3.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            storeFile file("C:\\Users\\jabiz\\key\\signApp.jks")
+            storePassword "13730104se"
+            keyAlias "sootood"
+            keyPassword "13730104se"
+
+        }
+
     }
     buildTypes {
         release {

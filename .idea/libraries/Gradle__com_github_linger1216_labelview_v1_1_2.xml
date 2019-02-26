@@ -5,8 +5,6 @@
       <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.github.linger1216/labelview/v1.1.2/res" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.linger1216/labelview/v1.1.2/ccdbdfa28c0fd7c4686f7b1ceee1ea2c3e2bd758/labelview-v1.1.2-sources.jar!/" />
-    </SOURCES>
+    <SOURCES />
   </library>
 </component>
