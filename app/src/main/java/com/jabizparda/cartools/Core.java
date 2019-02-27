@@ -8,6 +8,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.jabizparda.cartools.room.AgantData;
 import com.jabizparda.cartools.room.AppDatabase;
+import com.jabizparda.cartools.room.BoughtToolsData;
 import com.jabizparda.cartools.room.CarData;
 import com.jabizparda.cartools.room.CategoryData;
 import com.jabizparda.cartools.room.CityData;
@@ -143,6 +144,21 @@ public class Core {
         AppDatabase.getAppDatabase(context.getApplicationContext()).maintenceDoa().insertAll(maintence);
     }
 
+    public void insertToolToBasket(BoughtToolsData tools) {
+        AppDatabase.getAppDatabase(context.getApplicationContext()).boughtToolsDoa().insertTools(tools);
+    }
+
+    public void deleteToolFromBasket(String codeTools) {
+        AppDatabase.getAppDatabase(context.getApplicationContext()).boughtToolsDoa().deleteOnce(codeTools);
+    }
+
+    public Integer getBasketCount() {
+      return  AppDatabase.getAppDatabase(context.getApplicationContext()).boughtToolsDoa().countBought();
+    }
+
+    public List<BoughtToolsData> getAllbasket() {
+        return  AppDatabase.getAppDatabase(context.getApplicationContext()).boughtToolsDoa().getAll();
+    }
     public void updateType(JsonObject jsonObject,FutureCallback<JsonObject> callback) {
         Ion.with(context)
                 .load("POST","http://91.92.190.54:1095/api/friend/GetDetailGroup")

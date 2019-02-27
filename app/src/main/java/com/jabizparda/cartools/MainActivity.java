@@ -2,6 +2,7 @@ package com.jabizparda.cartools;
 
 import android.app.TaskStackBuilder;
 import android.app.WallpaperManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -10,6 +11,8 @@ import android.graphics.BitmapFactory;
 import android.graphics.BitmapRegionDecoder;
 import android.graphics.Color;
 import android.graphics.Rect;
+import android.graphics.drawable.Drawable;
+import android.graphics.drawable.LayerDrawable;
 import android.media.Image;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -74,6 +77,7 @@ import com.jabizparda.cartools.adapter.Model;
 import com.jabizparda.cartools.adapter.TypeAdapter;
 import com.jabizparda.cartools.adapter.YearData;
 import com.jabizparda.cartools.room.AppDatabase;
+import com.jabizparda.cartools.room.BoughtToolsData;
 import com.jabizparda.cartools.room.CarData;
 import com.jabizparda.cartools.room.CategoryData;
 import com.jabizparda.cartools.room.MaintenceDataSAvingVErsion;
@@ -116,6 +120,7 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
     MaterialSpinner spinner5;
 
     private boolean shown = false;
+    Menu menu;
 
     List<SearchSuggestion> listSearch = null;
     Bitmap image;
@@ -506,6 +511,7 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
     }
 
 
+
     @Override
     public void onBackPressed() {
         super.onBackPressed();
@@ -515,6 +521,7 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        this.menu = menu;
         return true;
     }
 
@@ -546,6 +553,31 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
 //        expandableLayout1.collapse();
 //        expandableLayout2.toggle(); // toggle expand and collapse
 //    }
+
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        setCount(this, core.getBasketCount().toString());
+
+        return true;
+    }
+    public void setCount(Context context, String count) {
+        MenuItem menuItem = menu.getItem(0);
+        LayerDrawable icon = (LayerDrawable) menuItem.getIcon();
+
+        CountDrawable badge;
+
+        // Reuse drawable if possible
+        Drawable reuse = icon.findDrawableByLayerId(R.id.ic_group_count);
+        if (reuse != null && reuse instanceof CountDrawable) {
+            badge = (CountDrawable) reuse;
+        } else {
+            badge = new CountDrawable(context);
+        }
+        badge.setCount(Core.toPersianStatic(count));
+        icon.mutate();
+        icon.setDrawableByLayerId(R.id.ic_group_count, badge);
+    }
 
     public void updateType(List<Integer> typeIdArray, final RecyclerView rv) {
         JsonObject jsonObject = new JsonObject();
@@ -619,8 +651,12 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        if (id == R.id.ic_group ){
 
-
+            Intent intent = new Intent(MainActivity.this, Basket.class);
+            intent.putExtra("from","bar");
+            startActivity(intent);
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -686,7 +722,15 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
         maintenceAll = new MaintenceAdapter(getListData(), MainActivity.this, maiitenceDataVS, new MaintenceAdapter.IViewHolderClicks() {
             @Override
             public void onToolClick(MaintenceDataSAvingVErsion v, int pos) {
-                showGetCountDialog();
+
+                if (v.getStateSelect() == 1) {
+                    showGetCountDialog(v);
+
+                } else {
+                    core.deleteToolFromBasket(v.getCodeMaintence());
+                    setCount(MainActivity.this,String.valueOf(core.getBasketCount()));
+
+                }
             }
 
             @Override
@@ -845,11 +889,15 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
 
     AlertDialog alertCount;
 
-    public void showGetCountDialog() {
+    public void showGetCountDialog(MaintenceDataSAvingVErsion data) {
         View view = getLayoutInflater().inflate(R.layout.dialog_number, null);
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.CustomDialog);
         final TextView counterText = (TextView) view.findViewById(R.id.textCount);
         final int[] number = {Integer.valueOf(counterText.getText().toString())};
+        final BoughtToolsData tool = new BoughtToolsData();
+        tool.setCode(data.getPkMaintence());
+        tool.setName(data.getNameMaintence());
+        tool.setPrice(data.getPricemaintence());
         view.findViewById(R.id.minesBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -867,6 +915,15 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
                 Logger.d("plus");
                 number[0] += 1;
                 counterText.setText(Core.toPersianStatic(String.valueOf(number[0])));
+            }
+        });
+        view.findViewById(R.id.doneBtn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                tool.setCount(String.valueOf(Integer.valueOf(counterText.getText().toString())));
+                core.insertToolToBasket(tool);
+                setCount(MainActivity.this,String.valueOf(core.getBasketCount()));
+                alertCount.dismiss();
             }
         });
         builder.setView(view);

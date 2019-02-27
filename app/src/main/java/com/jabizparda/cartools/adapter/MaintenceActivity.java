@@ -48,6 +48,7 @@ import com.jabizparda.cartools.Core;
 import com.jabizparda.cartools.HappyCompatActivity;
 import com.jabizparda.cartools.MainActivity;
 import com.jabizparda.cartools.R;
+import com.jabizparda.cartools.room.BoughtToolsData;
 import com.jabizparda.cartools.room.MaintenceDataSAvingVErsion;
 import com.koushikdutta.async.future.FutureCallback;
 import com.orhanobut.logger.Logger;
@@ -129,11 +130,13 @@ public class MaintenceActivity extends HappyCompatActivity {
             @Override
             public void onToolClick(MaintenceDataSAvingVErsion v, int pos) {
 
-                showGetCountDialog(v);
+
                 if (v.getStateSelect() == 1) {
+                    showGetCountDialog(v);
                     selectedData.add(v);
                 } else {
                     selectedData.remove(v);
+                    core.deleteToolFromBasket(v.getCodeMaintence());
                 }
                 if (selectedData != null) {
                     getList.setVisibility(View.VISIBLE);
@@ -415,6 +418,10 @@ public class MaintenceActivity extends HappyCompatActivity {
         AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.CustomDialog);
         final EditText counterText = (EditText) view.findViewById(R.id.textCount);
         counterText.setText(Core.toPersianStatic("1"));
+        final BoughtToolsData tool = new BoughtToolsData();
+        tool.setCode(data.getPkMaintence());
+        tool.setName(data.getNameMaintence());
+        tool.setPrice(data.getPricemaintence());
         view.findViewById(R.id.minesBtn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -440,6 +447,8 @@ public class MaintenceActivity extends HappyCompatActivity {
             @Override
             public void onClick(View v) {
                 data.setCounterMaintence(Integer.valueOf(counterText.getText().toString()));
+                tool.setCount(String.valueOf(Integer.valueOf(counterText.getText().toString())));
+                core.insertToolToBasket(tool);
                 alertCount.dismiss();
             }
         });

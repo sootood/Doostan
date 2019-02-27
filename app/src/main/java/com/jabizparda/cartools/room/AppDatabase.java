@@ -9,7 +9,7 @@ import android.content.Context;
  * Created by Karo on 9/10/2017.
  */
 
-@Database(entities = {CategoryData.class,TypeData.class,MaintenceDataSAvingVErsion.class,User.class,CarData.class, ProvinceData.class,CityData.class,AgantData.class}, version = 4)
+@Database(entities = {CategoryData.class,TypeData.class,MaintenceDataSAvingVErsion.class,User.class,CarData.class, ProvinceData.class,CityData.class,AgantData.class,BoughtToolsData.class}, version = 4)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase INSTANCE;
@@ -22,6 +22,7 @@ public abstract class AppDatabase extends RoomDatabase {
     public abstract ProvinceDoa provinceDoa();
     public abstract CityDoa cityDoa();
     public abstract AgantDoa agantDoa();
+    public abstract BoughtToolsDoa boughtToolsDoa();
 
 
 

@@ -1,128 +1,141 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    android:paddingBottom="40dp"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<ScrollView-->
+    <!--android:paddingBottom="40dp"-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="0dp"-->
+    <!--android:layout_weight="1"-->
+    <!--android:isScrollContainer="true"-->
+    <!--android:windowSoftInputMode="adjustResize">-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    android:isScrollContainer="true"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:windowSoftInputMode="adjustResize">
 
-    <LinearLayout
-        android:paddingTop="@dimen/activity_vertical_margin"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin">
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="1.2">
 
-        <android.support.v7.widget.CardView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="5dp"
-            >
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/titlef"
-                android:paddingTop="10dp"
-                android:paddingBottom="5dp"
-                android:paddingRight="5dp"
-                android:textColor="@color/black"
-                android:textSize="15sp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="جستحوی پیشرفته"/>
+                android:layout_height="27dp"
+                android:paddingTop="1dp"
+                android:paddingRight="5dp"
+                android:paddingBottom="5dp"
+                android:text="جستجوی پیشرفته"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
 
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:nextFocusDown="@id/titlef"
+                android:orientation="vertical"
                 android:paddingLeft="@dimen/activity_horizontal_margin"
-                android:paddingRight="@dimen/activity_horizontal_margin"
                 android:paddingTop="@dimen/activity_vertical_margin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:paddingRight="@dimen/activity_horizontal_margin">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorAccent"
-            android:textSize="15dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="نوع ماشین را انتخاب کنید:"/>
-        <android.support.v7.widget.CardView
-            android:layout_margin="10dp"
-            app:cardBackgroundColor="@color/whaite"
-            app:cardCornerRadius="10dp"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <fr.ganfra.materialspinner.MaterialSpinner
-                android:layout_margin="3dp"
-                android:layout_gravity="center_vertical"
-                android:id="@+id/spinner3"
-                android:background="@color/whaite"
-                android:layoutDirection="rtl"
-                android:gravity="right"
-                android:textAlignment="gravity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:ms_arrowColor="#030000ff"
-                app:ms_arrowSize="16dp"
-                app:ms_thickness="0.3dp"
-                app:ms_isRtl="true"
-                app:ms_enableFloatingLabel="false"
-                app:ms_hint="نوع ماشین"
-                app:ms_multiline="false" />
-        </android.support.v7.widget.CardView>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="نوع ماشین را انتخاب کنید:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorAccent"
-            android:textSize="15dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="نوع کالا را انتخاب کنید:"/>
-        <android.support.v7.widget.CardView
-            android:layout_margin="10dp"
-           app:cardBackgroundColor="@color/whaite"
-            app:cardCornerRadius="10dp"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <fr.ganfra.materialspinner.MaterialSpinner
-           android:layout_margin="3dp"
-            android:layout_gravity="center_vertical"
-            android:id="@+id/spinner1"
-            android:background="@color/whaite"
-            android:layoutDirection="rtl"
-            android:gravity="right"
-            android:textAlignment="gravity"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:ms_arrowColor="#030000ff"
-            app:ms_arrowSize="16dp"
-            app:ms_thickness="0.3dp"
-            app:ms_isRtl="true"
-            app:ms_enableFloatingLabel="false"
-            app:ms_hint="نوع کالا"
-            app:ms_multiline="false" />
-        </android.support.v7.widget.CardView>
-        <!--<android.support.v7.widget.CardView-->
-            <!--android:layout_margin="10dp"-->
-            <!--app:cardBackgroundColor="@color/whaite"-->
-            <!--app:cardCornerRadius="10dp"-->
-            <!--android:layout_gravity="center"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content">-->
-            <!--<fr.ganfra.materialspinner.MaterialSpinner-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    app:cardBackgroundColor="@color/whaite"
+                    app:cardCornerRadius="10dp">
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="3dp"
+                        android:background="@color/whaite"
+                        android:gravity="right"
+                        android:layoutDirection="rtl"
+                        android:textAlignment="gravity"
+                        app:ms_arrowColor="#030000ff"
+                        app:ms_arrowSize="16dp"
+                        app:ms_enableFloatingLabel="false"
+                        app:ms_hint="نوع ماشین"
+                        app:ms_isRtl="true"
+                        app:ms_hintTextSize="11sp"
+                        app:ms_multiline="false"
+                        app:ms_thickness="0.3dp" />
+                </android.support.v7.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="نوع کالا را انتخاب کنید:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    app:cardBackgroundColor="@color/whaite"
+                    app:cardCornerRadius="10dp">
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="3dp"
+                        android:background="@color/whaite"
+                        android:gravity="right"
+                        android:layoutDirection="rtl"
+                        android:textAlignment="gravity"
+                        app:ms_arrowColor="#030000ff"
+                        app:ms_arrowSize="16dp"
+                        app:ms_enableFloatingLabel="false"
+                        app:ms_hint="نوع کالا"
+                        app:ms_isRtl="true"
+                        app:ms_hintTextSize="11sp"
+                        app:ms_multiline="false"
+                        app:ms_thickness="0.3dp" />
+                </android.support.v7.widget.CardView>
+                <!--<android.support.v7.widget.CardView-->
+                <!--android:layout_margin="10dp"-->
+                <!--app:cardBackgroundColor="@color/whaite"-->
+                <!--app:cardCornerRadius="10dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
+                <!--<fr.ganfra.materialspinner.MaterialSpinner-->
                 <!--android:layout_margin="3dp"-->
                 <!--android:layout_gravity="center_vertical"-->
                 <!--android:id="@+id/spinner2"-->
@@ -139,239 +152,253 @@
                 <!--app:ms_enableFloatingLabel="false"-->
                 <!--app:ms_hint="نوع کالا"-->
                 <!--app:ms_multiline="false" />-->
-        <!--</android.support.v7.widget.CardView>-->
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/colorAccent"
-            android:textSize="15dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:text="سال خودرو را انتخاب کنید:"/>
-        <android.support.v7.widget.CardView
-            android:layout_margin="10dp"
-            android:id="@+id/prdouctYear"
-            app:cardBackgroundColor="@color/whaite"
-            app:cardCornerRadius="10dp"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <fr.ganfra.materialspinner.MaterialSpinner
-                android:layout_margin="3dp"
-                android:layout_gravity="center_vertical"
-                android:id="@+id/spinner4"
-                android:background="@color/whaite"
-                android:layoutDirection="rtl"
-                android:gravity="right"
-                android:textAlignment="gravity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:ms_arrowColor="#030000ff"
-                app:ms_arrowSize="16dp"
-                app:ms_thickness="0.3dp"
-                app:ms_isRtl="true"
-                app:ms_enableFloatingLabel="false"
-                app:ms_hint="سال خودرو"
-                app:ms_multiline="false" />
-        </android.support.v7.widget.CardView>
-
-        <!--<fr.ganfra.materialspinner.MaterialSpinner-->
-            <!--android:id="@+id/spinner5"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content" />-->
-
-        <!--<fr.ganfra.materialspinner.MaterialSpinner-->
-            <!--android:id="@+id/spinner6"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--app:ms_enableErrorLabel="false"-->
-            <!--app:ms_enableFloatingLabel="false"-->
-            <!--app:ms_dropDownHintView="@layout/dropdown_hint"-->
-            <!--app:ms_hintView="@layout/hint_item"-->
-            <!--app:ms_hint="hint"-->
-            <!--app:ms_hintColor="#0000FF" />-->
-
-        <!--<fr.ganfra.materialspinner.MaterialSpinner-->
-            <!--android:id="@+id/spinner7"-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="wrap_content" />-->
-        <android.support.v7.widget.CardView
-            android:id="@+id/searchCard"
-            android:onClick="searchClicked"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_below="@id/prdouctYear"
-            android:layout_marginRight="50dp"
-            android:layout_marginLeft="50dp"
-            app:cardCornerRadius="10dp"
-            app:cardBackgroundColor="@color/colorPrimary"
-            android:padding="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
-            <LinearLayout
-                android:padding="15dp"
-                android:gravity="center"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
+                <!--</android.support.v7.widget.CardView>-->
 
                 <TextView
-                    android:textColor="@color/whaite"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:text="سال خودرو را انتخاب کنید:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15dp" />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/prdouctYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    app:cardBackgroundColor="@color/whaite"
+                    app:cardCornerRadius="10dp">
+
+                    <fr.ganfra.materialspinner.MaterialSpinner
+                        android:id="@+id/spinner4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_margin="3dp"
+                        android:background="@color/whaite"
+                        android:gravity="right"
+                        android:layoutDirection="rtl"
+                        android:textAlignment="gravity"
+                        app:ms_arrowColor="#030000ff"
+                        app:ms_arrowSize="16dp"
+                        app:ms_enableFloatingLabel="false"
+                        app:ms_hint="سال خودرو"
+                        app:ms_isRtl="true"
+                        app:ms_hintTextSize="11sp"
+                        app:ms_multiline="false"
+                        app:ms_thickness="0.3dp" />
+                </android.support.v7.widget.CardView>
+
+                <!--<fr.ganfra.materialspinner.MaterialSpinner-->
+                <!--android:id="@+id/spinner5"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+
+                <!--<fr.ganfra.materialspinner.MaterialSpinner-->
+                <!--android:id="@+id/spinner6"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--app:ms_enableErrorLabel="false"-->
+                <!--app:ms_enableFloatingLabel="false"-->
+                <!--app:ms_dropDownHintView="@layout/dropdown_hint"-->
+                <!--app:ms_hintView="@layout/hint_item"-->
+                <!--app:ms_hint="hint"-->
+                <!--app:ms_hintColor="#0000FF" />-->
+
+                <!--<fr.ganfra.materialspinner.MaterialSpinner-->
+                <!--android:id="@+id/spinner7"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content" />-->
+                <android.support.v7.widget.CardView
+                    android:id="@+id/searchCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_below="@id/prdouctYear"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="50dp"
+                    android:layout_marginBottom="5dp"
+                    android:onClick="searchClicked"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="#0066cc"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="10dp">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="جستجو"
+                            android:textColor="@color/whaite"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:padding="2dp"
+                            android:src="@drawable/ic_magnifier" />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="0.3"
+        android:padding="5dp"
+        app:cardCornerRadius="3dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:padding="3dp"
+                android:text="جستجو بر اساس کد کالا"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/corner_grey"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/codeSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/corner_right"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="جستجو"
+                    android:textColor="@color/whaite" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompCode"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="true"
+                    android:inputType="number"
+                    android:padding="0dp"
+                    android:textDirection="ltr" />
+
+                <TextView
+                    android:id="@+id/staticCode"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="20dp"
-                    android:text="جستجو"/>
-
-                <ImageView
-                    android:padding="2dp"
-                    android:layout_marginLeft="5dp"
                     android:layout_gravity="center"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/ic_magnifier"/>
-
+                    android:paddingLeft="5dp"
+                    android:text="1660"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp" />
             </LinearLayout>
 
-        </android.support.v7.widget.CardView>
         </LinearLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-        <android.support.v7.widget.CardView
-            app:cardCornerRadius="3dp"
-            android:layout_margin="8dp"
-            android:padding="5dp"
+
+
+    </android.support.v7.widget.CardView>
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="0.3"
+        android:padding="5dp"
+        app:cardCornerRadius="3dp">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <LinearLayout
-                android:layout_margin="10dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="vertical">
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <TextView
-                    android:padding="3dp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="جستجو بر اساس کد کالا"/>
+                android:layout_marginBottom="5dp"
+                android:padding="3dp"
+                android:text="جستجو بر اساس نام کالا"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
 
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/corner_grey"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/codeSearch"
-                        android:textColor="@color/whaite"
-                        android:clickable="true"
-                        android:background="@drawable/corner_right"
-                        android:gravity="center"
-                        android:layout_weight="0.3"
-                        android:layout_width="0dp"
-                        android:text="جستجو"
-                        android:layout_height="fill_parent" />
-
-                    <AutoCompleteTextView
-                        android:background="@android:color/transparent"
-                        android:id="@+id/autoCompCode"
-                        android:layout_margin="10dp"
-                        android:cursorVisible="true"
-                        android:padding="0dp"
-                        android:inputType="number"
-                        android:textDirection="ltr"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"/>
-
-                    <TextView
-                        android:id="@+id/staticCode"
-                        android:paddingLeft="5dp"
-                        android:textColor="@color/dark_gray"
-                        android:textSize="18dp"
-                        android:layout_gravity="center"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="1660"/>
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-        </android.support.v7.widget.CardView>
-
-
-        <android.support.v7.widget.CardView
-            app:cardCornerRadius="3dp"
-            android:layout_margin="8dp"
-            android:padding="5dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
             <LinearLayout
-                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/corner_grey"
+                android:orientation="horizontal">
+
                 <TextView
-                    android:padding="3dp"
-                    android:textColor="@color/black"
-                    android:textSize="15sp"
-                    android:layout_marginBottom="5dp"
-                    android:layout_width="match_parent"
+                    android:id="@+id/wordSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="0.3"
+                    android:background="@drawable/corner_right"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:text="جستجو"
+                    android:textColor="@color/whaite" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompName"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="جستجو بر اساس نام کالا"/>
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:cursorVisible="true"
+                    android:hint="جستجو"
+                    android:padding="0dp"
+                    android:textColorHint="@color/dark_gray"
+                    android:textDirection="rtl" />
 
-                <LinearLayout
-                    android:layout_marginStart="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:background="@drawable/corner_grey"
-                    android:orientation="horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:id="@+id/wordSearch"
-                        android:textColor="@color/whaite"
-                        android:clickable="true"
-                        android:background="@drawable/corner_right"
-                        android:gravity="center"
-                        android:layout_weight="0.3"
-                        android:layout_width="0dp"
-                        android:text="جستجو"
-                        android:layout_height="fill_parent" />
-
-                    <AutoCompleteTextView
-                        android:background="@android:color/transparent"
-                        android:id="@+id/autoCompName"
-                        android:layout_margin="10dp"
-                        android:cursorVisible="true"
-                        android:padding="0dp"
-                        android:hint="جستجو"
-                        android:textColorHint="@color/dark_gray"
-                        android:textDirection="rtl"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"/>
-
-                    <TextView
-                        android:paddingRight="5dp"
-                        android:textColor="@color/dark_gray"
-                        android:textSize="18dp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="5dp"
-                        android:text="     "/>
-                </LinearLayout>
-
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp"
+                    android:paddingRight="5dp"
+                    android:text="     "
+                    android:textColor="@color/dark_gray"
+                    android:textSize="18dp" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
 
 
-    </LinearLayout>
+</LinearLayout>
 
-</ScrollView>
+    <!--</ScrollView>-->

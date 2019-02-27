@@ -42,7 +42,7 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="انتخاب محصولات"/>
+            android:text="نمایش سبد کالا"/>
 
     </android.support.design.internal.BottomNavigationItemView>
 </android.support.design.widget.CoordinatorLayout>

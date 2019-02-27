@@ -26,4 +26,6 @@ public interface AgantDoa {
     @Insert(onConflict = REPLACE)
     void insertAll(List<AgantData> agantDatas);
 
+
+
 }

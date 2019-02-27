@@ -9,9 +9,9 @@
     </string-array>
 
     <string-array name="polluted_waves">
-        <item>#19aa28</item>
-        <item>#19aa28</item>
-        <item>#19aa28</item>
+        <item>#00cc33 </item>
+        <item>#00cc33 </item>
+        <item>#00cc33 </item>
         <!--<item>#8eac0a</item>-->
         <!--<item>#6ecfd2</item>-->
     </string-array>

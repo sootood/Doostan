@@ -23,6 +23,12 @@ public class BasketData implements Parcelable {
     @SerializedName("selectState")
     int stateSelect;
 
+    BasketData(String code, String name, String price,String count){
+        this.choosenCode = code;
+        this.choosenName = name;
+        this.choosenPrice = price;
+        this.choosenCountMaintence = count;
+    }
 
     protected BasketData(Parcel in) {
 

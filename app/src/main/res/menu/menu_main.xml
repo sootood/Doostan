@@ -11,14 +11,16 @@
         <!--android:textSize="2sp"-->
         <!--/>-->
 
+    <!--<item-->
+        <!--android:id="@+id/action_settings"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:icon="@mipmap/ic_launcher"-->
+        <!--android:title="دوستان"-->
+        <!--app:showAsAction="always" />-->
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:icon="@mipmap/ic_launcher"
-        android:title="دوستان"
+        android:id="@+id/ic_group"
+        android:icon="@drawable/actionbar_group_icon"
+        android:title="تایتل"
         app:showAsAction="always" />
-
-
-
 
 </menu>
