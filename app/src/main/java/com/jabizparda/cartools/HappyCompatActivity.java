@@ -20,11 +20,12 @@ public class HappyCompatActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        FontUtil.setDefaultFont(this, "SERIF", "IRANSansMobile_Light.ttf");
-        FontUtil.setDefaultFont(this, "DEFAULT", "IRANSansMobile_Light.ttf");
-        FontUtil.setDefaultFont(this, "MONOSPACE", "IRANSansMobile_Light.ttf");
-        FontUtil.setDefaultFont(this, "SERIF", "IRANSansMobile_Light.ttf");
-        FontUtil.setDefaultFont(this, "SANS_SERIF", "IRANSansMobile_Light.ttf");
+        FontUtil.setDefaultFont(this, "SERIF", "IRANYekanMobileLight.ttf");
+        FontUtil.setDefaultFont(this, "YEKAN", "IRANYekanMobileLight.ttf");
+        FontUtil.setDefaultFont(this, "DEFAULT", "IRANYekanMobileLight.ttf");
+        FontUtil.setDefaultFont(this, "MONOSPACE", "IRANYekanMobileLight.ttf");
+        FontUtil.setDefaultFont(this, "SERIF", "IRANYekanMobileLight.ttf");
+        FontUtil.setDefaultFont(this, "SANS_SERIF", "IRANYekanMobileLight.ttf");
         getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
 
     }
@@ -37,7 +38,7 @@ public class HappyCompatActivity extends AppCompatActivity {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Map<String, Typeface> newMap = new HashMap<String, Typeface>();
-            newMap.put("serif", customFontTypeface);
+            newMap.put("YEKAN", customFontTypeface);
             try {
                 final Field staticField = Typeface.class
                         .getDeclaredField("sSystemFontMap");

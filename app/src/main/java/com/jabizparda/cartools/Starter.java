@@ -77,7 +77,7 @@ public class Starter extends HappyCompatActivity {
         core= new Core(this);
         Logger.addLogAdapter(new AndroidLogAdapter());
         final ImageView imageView= (ImageView) findViewById(R.id.logo);
-        final ImageView slogan= (ImageView) findViewById(R.id.slogen);
+//        final ImageView slogan= (ImageView) findViewById(R.id.slogen);
         final Animation fadeoutAnim = AnimationUtils.loadAnimation(this, R.anim.fadein);
         imageView.startAnimation(fadeoutAnim);
 
@@ -86,8 +86,8 @@ public class Starter extends HappyCompatActivity {
             @Override
             public void run() {
                 imageView.clearAnimation();
-                slogan.setVisibility(View.VISIBLE);
-                slogan.startAnimation(fadeoutAnim);
+//                slogan.setVisibility(View.VISIBLE);
+//                slogan.startAnimation(fadeoutAnim);
             }
         }, 2000);
 
@@ -132,7 +132,7 @@ public class Starter extends HappyCompatActivity {
                 btnHandler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        slogan.clearAnimation();
+//                        slogan.clearAnimation();
                         llBtnLogin.setVisibility(View.VISIBLE);
                         llBtnLogin.startAnimation(fadeoutAnim);
                     }

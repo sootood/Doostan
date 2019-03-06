@@ -36,7 +36,7 @@
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
        android:layout_gravity="bottom"
-        android:text="ثیت نهایی"
+        android:text="ثبت نهایی"
         android:textColor="@color/whaite"
         android:textSize="15sp"
         android:typeface="sans"

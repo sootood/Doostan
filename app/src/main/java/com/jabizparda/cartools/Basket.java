@@ -29,6 +29,7 @@ import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class Basket extends HappyCompatActivity {
 
@@ -178,6 +179,55 @@ public class Basket extends HappyCompatActivity {
         basketRv.setLayoutManager(linearLayoutManager);
     }
 
+    @OnClick(R.id.finalOrder)
+    public void onFinalOrderClick(View view){
+
+        int id = view.getId();
+        JsonArray jsonArray = new JsonArray();
+        JsonArray codeArray = new JsonArray();
+        for (int i = 1; i < basketDatas.size(); i++) {
+
+            JsonObject object = new JsonObject();
+            object.addProperty("codeTools", basketDatas.get(i).getChoosenCode());
+            object.addProperty("countTools", String.valueOf(!basketDatas.get(i).getChoosenCountMaintence().equals("0") ? basketDatas.get(i).getChoosenCountMaintence() : 1));
+
+            if (!jsonArray.contains(object))
+                jsonArray.add(object.get("codeTools"));
+
+            codeArray.add(object.get("countTools"));
+        }
+        if (id == R.id.finalOrder) {
+            JsonObject jsonObject = new JsonObject();
+            jsonObject.addProperty("FirebaseId", FirebaseInstanceId.getInstance().getToken());
+            String jsonArrayString = jsonArray.toString();
+            jsonObject.addProperty("Array", jsonArrayString);
+            jsonObject.addProperty("ArrayGroup", codeArray.toString());
+            Logger.d(jsonObject);
+            showProgress(true);
+            core.insertIntoOrder(jsonObject, new FutureCallback<JsonObject>() {
+                @Override
+                public void onCompleted(Exception e, JsonObject result) {
+                    Logger.d(result);
+                    Logger.d(e);
+                    if (result.has("code") && result.get("code").getAsInt() == 200) {
+                        showProgress(false);
+//                       EventBus.getDefault().post(new EventGoBackToMain());
+                        showToast(Basket.this, "لیست سفارش خود را از منو مشاهده کنید.");
+                        Intent intent = new Intent(Basket.this, Basket.class);
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                        startActivity(intent);
+                        finish();
+
+                    } else {
+                        showProgress(false);
+                        showToast(Basket.this, "لطفا دوباره تلاش کنید.");
+                    }
+
+                }
+            });
+
+        }
+    }
     @Override
     public void onBackPressed() {
         super.onBackPressed();

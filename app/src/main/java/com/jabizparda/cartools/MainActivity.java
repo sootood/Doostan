@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapRegionDecoder;
@@ -39,6 +40,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.util.Base64;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -675,9 +677,11 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
         int id = item.getItemId();
 
         if (id == R.id.nav_call) {
-            Intent intent = new Intent(Intent.ACTION_DIAL);
-            intent.setData(Uri.parse("tel:" + "02166506037"));
-            startActivity(intent);
+//            Intent intent = new Intent(Intent.ACTION_DIAL);
+//            intent.setData(Uri.parse("tel:" + "02166506037"));
+//            startActivity(intent);
+
+            dialogChangeLang();
 
         } else if (id == R.id.nav_recently) {
 
@@ -930,5 +934,39 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
         builder.setCancelable(true);
         alertCount = builder.create();
         alertCount.show();
+    }
+
+
+    AlertDialog alertLangDialog;
+
+    public void dialogChangeLang() {
+        View view = getLayoutInflater().inflate(R.layout.dialog_lang, null);
+        AlertDialog.Builder builder = new AlertDialog.Builder(this, R.style.CustomDialog);
+        builder.setView(view);
+        final CardView faCard = (CardView) view.findViewById(R.id.persianCard);
+        final CardView enCard = (CardView) view.findViewById(R.id.engCard);
+        final Resources res = getApplicationContext().getResources();
+        final DisplayMetrics dm = res.getDisplayMetrics();
+
+
+        view.findViewById(R.id.persianCard).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
+        });
+        view.findViewById(R.id.engCard).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+            }
+        });
+
+        builder.setCancelable(true);
+        alertLangDialog = builder.create();
+        alertLangDialog.show();
+
     }
 }
