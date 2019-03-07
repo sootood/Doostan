@@ -1,13 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--<ScrollView-->
-    <!--android:paddingBottom="40dp"-->
-    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="0dp"-->
-    <!--android:layout_weight="1"-->
-    <!--android:isScrollContainer="true"-->
-    <!--android:windowSoftInputMode="adjustResize">-->
+<?xml version="1.0" encoding="utf-8"?><!--<ScrollView--><!--android:paddingBottom="40dp"--><!--xmlns:android="http://schemas.android.com/apk/res/android"--><!--xmlns:app="http://schemas.android.com/apk/res-auto"--><!--android:layout_width="match_parent"--><!--android:layout_height="0dp"--><!--android:layout_weight="1"--><!--android:isScrollContainer="true"--><!--android:windowSoftInputMode="adjustResize">-->
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -54,9 +45,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.5"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
                     android:text="نوع ماشین را انتخاب کنید:"
                     android:textColor="@color/colorAccent"
                     android:textSize="15dp" />
@@ -64,9 +55,9 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:layout_margin="1dp"
+                    android:layout_weight="1"
                     app:cardBackgroundColor="@color/whaite"
                     app:cardCornerRadius="10dp">
 
@@ -75,7 +66,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_margin="3dp"
+                        android:layout_margin="0dp"
                         android:background="@color/whaite"
                         android:gravity="right"
                         android:layoutDirection="rtl"
@@ -84,18 +75,19 @@
                         app:ms_arrowSize="16dp"
                         app:ms_enableFloatingLabel="false"
                         app:ms_hint="نوع ماشین"
-                        app:ms_isRtl="true"
                         app:ms_hintTextSize="11sp"
+                        app:ms_isRtl="true"
                         app:ms_multiline="false"
-                        app:ms_thickness="0.3dp" />
+                        app:ms_thickness="0.0dp"
+                        />
                 </android.support.v7.widget.CardView>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.5"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
                     android:text="نوع کالا را انتخاب کنید:"
                     android:textColor="@color/colorAccent"
                     android:textSize="15dp" />
@@ -103,9 +95,9 @@
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:layout_margin="1dp"
+                    android:layout_weight="1"
                     app:cardBackgroundColor="@color/whaite"
                     app:cardCornerRadius="10dp">
 
@@ -114,7 +106,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_margin="3dp"
+                        android:layout_margin="0dp"
                         android:background="@color/whaite"
                         android:gravity="right"
                         android:layoutDirection="rtl"
@@ -123,10 +115,10 @@
                         app:ms_arrowSize="16dp"
                         app:ms_enableFloatingLabel="false"
                         app:ms_hint="نوع کالا"
-                        app:ms_isRtl="true"
                         app:ms_hintTextSize="11sp"
+                        app:ms_isRtl="true"
                         app:ms_multiline="false"
-                        app:ms_thickness="0.3dp" />
+                        app:ms_thickness="0.0dp" />
                 </android.support.v7.widget.CardView>
                 <!--<android.support.v7.widget.CardView-->
                 <!--android:layout_margin="10dp"-->
@@ -157,9 +149,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="0.5"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
+                    android:layout_weight="0.5"
                     android:text="سال خودرو را انتخاب کنید:"
                     android:textColor="@color/colorAccent"
                     android:textSize="15dp" />
@@ -168,18 +160,18 @@
                     android:id="@+id/prdouctYear"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
                     android:layout_gravity="center"
                     android:layout_margin="1dp"
+                    android:layout_weight="1"
                     app:cardBackgroundColor="@color/whaite"
-                    app:cardCornerRadius="10dp">
+                    app:cardCornerRadius="10sp">
 
                     <fr.ganfra.materialspinner.MaterialSpinner
                         android:id="@+id/spinner4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_vertical"
-                        android:layout_margin="3dp"
+                        android:layout_margin="0dp"
                         android:background="@color/whaite"
                         android:gravity="right"
                         android:layoutDirection="rtl"
@@ -188,10 +180,10 @@
                         app:ms_arrowSize="16dp"
                         app:ms_enableFloatingLabel="false"
                         app:ms_hint="سال خودرو"
-                        app:ms_isRtl="true"
                         app:ms_hintTextSize="11sp"
+                        app:ms_isRtl="true"
                         app:ms_multiline="false"
-                        app:ms_thickness="0.3dp" />
+                        app:ms_thickness="0.0dp" />
                 </android.support.v7.widget.CardView>
 
                 <!--<fr.ganfra.materialspinner.MaterialSpinner-->
@@ -218,13 +210,13 @@
                     android:id="@+id/searchCard"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
-                    android:layout_weight="1"
                     android:layout_below="@id/prdouctYear"
                     android:layout_gravity="center"
                     android:layout_marginLeft="50dp"
                     android:layout_marginTop="5dp"
                     android:layout_marginRight="50dp"
                     android:layout_marginBottom="5dp"
+                    android:layout_weight="1"
                     android:onClick="searchClicked"
                     android:padding="10dp"
                     app:cardBackgroundColor="#0066cc"

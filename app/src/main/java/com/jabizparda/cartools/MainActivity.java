@@ -155,7 +155,7 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
         title = (TextView) findViewById(R.id.title);
 //        title.setTextSize((float) (0.027 * getResources().getDisplayMetrics().widthPixels));
 //        Logger.d(0.025 * getResources().getDisplayMetrics().widthPixels);
-        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN | WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN );
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN | WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         carCategorys = new ArrayList<>();
         typecategory = new ArrayList<>();
         final ArrayList<CategoryData> parish = new ArrayList<CategoryData>(AppDatabase.getAppDatabase(getApplicationContext()).categoryDoa().getAll());
@@ -452,29 +452,21 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.ic_car_parts),
+                        getResources().getDrawable(R.drawable.gallery),
                         Color.parseColor(colors[0])
                 ).title("محصولات")
-                        .badgeTitle("NTB")
                         .build()
         );
         models.add(
                 new NavigationTabBar.Model.Builder(
-                        getResources().getDrawable(R.drawable.ic_filter),
+                        getResources().getDrawable(R.drawable.search),
                         Color.parseColor(colors[1])
-                ).title("جستجوی پیشرفته")
-                        .badgeTitle("with")
+                )
+                        .title("جستجوی پیشرفته")
                         .build()
         );
-//        models.add(
-//                new NavigationTabBar.Model.Builder(
-//                        getResources().getDrawable(R.drawable.ic_garage),
-//                        Color.parseColor(colors[2])
-//                ).title("خانه")
-//                        .badgeTitle("state")
-//                        .build()
-//        );
-//
+
+
         navigationTabBar.setModels(models);
         navigationTabBar.setViewPager(viewPager, 3);
 
@@ -494,24 +486,17 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
 //
 //            }
 //        });
-
         navigationTabBar.setTitleMode(NavigationTabBar.TitleMode.ACTIVE);
-        navigationTabBar.setBadgeGravity(NavigationTabBar.BadgeGravity.BOTTOM);
-        navigationTabBar.setBadgePosition(NavigationTabBar.BadgePosition.CENTER);
-        navigationTabBar.setIsBadged(true);
-        navigationTabBar.setIsTitled(true);
+        navigationTabBar.setIsBadged(false);
+        navigationTabBar.setIsTitled(false);
         navigationTabBar.setIsTinted(true);
-        navigationTabBar.setIsBadgeUseTypeface(true);
-        navigationTabBar.setBadgeBgColor(Color.RED);
-        navigationTabBar.setBadgeTitleColor(Color.BLUE);
         navigationTabBar.setIsSwiped(true);
-//        navigationTabBar.setBgColor(getResources().getColor(R.color.whaite));
-        navigationTabBar.setBadgeSize(10);
-        navigationTabBar.setTitleSize(10);
-        navigationTabBar.setIconSizeFraction((float) 0.5);
+
+
+        // navigationTabBar.setTitleSize(20);
+        navigationTabBar.setIconSizeFraction((float) 0.8);
 
     }
-
 
 
     @Override
@@ -563,6 +548,7 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
 
         return true;
     }
+
     public void setCount(Context context, String count) {
         MenuItem menuItem = menu.getItem(0);
         LayerDrawable icon = (LayerDrawable) menuItem.getIcon();
@@ -653,10 +639,10 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.ic_group ){
+        if (id == R.id.ic_group) {
 
             Intent intent = new Intent(MainActivity.this, Basket.class);
-            intent.putExtra("from","bar");
+            intent.putExtra("from", "bar");
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
@@ -732,7 +718,7 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
 
                 } else {
                     core.deleteToolFromBasket(v.getCodeMaintence());
-                    setCount(MainActivity.this,String.valueOf(core.getBasketCount()));
+                    setCount(MainActivity.this, String.valueOf(core.getBasketCount()));
 
                 }
             }
@@ -926,7 +912,7 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
             public void onClick(View v) {
                 tool.setCount(String.valueOf(Integer.valueOf(counterText.getText().toString())));
                 core.insertToolToBasket(tool);
-                setCount(MainActivity.this,String.valueOf(core.getBasketCount()));
+                setCount(MainActivity.this, String.valueOf(core.getBasketCount()));
                 alertCount.dismiss();
             }
         });

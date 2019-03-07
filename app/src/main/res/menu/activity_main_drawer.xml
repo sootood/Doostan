@@ -4,12 +4,12 @@
 
     <item
         android:id="@+id/nav_about"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_selection"
         android:title="درباره ما" />
 
     <item
         android:id="@+id/nav_signUp_co"
-        android:icon="@drawable/ic_man_in_office"
+        android:icon="@drawable/ic_handshake"
         android:title="ثبت نام نمایندگی" />
 
 
@@ -19,8 +19,8 @@
         android:title="ارتباط با پشتیبانی" />
     <item
         android:id="@+id/nav_recently"
-        android:icon="@drawable/ic_description_black_24dp"
-        android:title="آخرین سفارش"
+        android:icon="@drawable/ic_check_list"
+        android:title="سفارش ها"
         />
 
     <!--<item-->
