@@ -92,7 +92,8 @@ public class MaintenceActivity extends HappyCompatActivity {
     private ScaleGestureDetector mScaleGestureDetector;
     private float mScaleFactor = 1.0f;
     private ImageView mImageView;
-
+    TextView title;
+    float textSize;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -103,6 +104,8 @@ public class MaintenceActivity extends HappyCompatActivity {
         }
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        title = (TextView) findViewById(R.id.title);
+
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -114,6 +117,39 @@ public class MaintenceActivity extends HappyCompatActivity {
                 finish();
             }
         });
+        float density = getResources().getDisplayMetrics().density;
+
+        if (density == 0.75f) {
+            // LDPI
+            title.setTextSize(4 * getResources().getDisplayMetrics().density);
+            textSize = 4 * getResources().getDisplayMetrics().density;
+
+        } else if (density >= 1.0f && density < 1.5f) {
+            // MDPI
+            title.setTextSize(4 * getResources().getDisplayMetrics().density);
+            textSize = 4 * getResources().getDisplayMetrics().density;
+
+        } else if (density == 1.5f) {
+            // HDPI
+            title.setTextSize(5 * getResources().getDisplayMetrics().density);
+            textSize = 5 * getResources().getDisplayMetrics().density;
+
+        } else if (density > 1.5f && density <= 2.0f) {
+            // XHDPI
+            title.setTextSize(5 * getResources().getDisplayMetrics().density);
+            textSize = 5 * getResources().getDisplayMetrics().density;
+
+        } else if (density > 2.0f && density <= 3.0f) {
+            // XXHDPI
+            title.setTextSize(6 * getResources().getDisplayMetrics().density);
+            textSize = 6 * getResources().getDisplayMetrics().density;
+
+        } else {
+            // XXXHDPI
+            title.setTextSize(7 * getResources().getDisplayMetrics().density);
+            textSize = 7 * getResources().getDisplayMetrics().density;
+
+        }
         ButterKnife.bind(this);
         core = new Core(this);
         showProgress(true);
@@ -126,7 +162,7 @@ public class MaintenceActivity extends HappyCompatActivity {
         naqsheDatas = new LinkedList<>();
         allData = new LinkedList<>();
         selectedData = new LinkedList<>();
-        adaptor = new MaintenceAdapter(getListData(), context, maintenceDatas, new MaintenceAdapter.IViewHolderClicks() {
+        adaptor = new MaintenceAdapter(getListData(),textSize, context, maintenceDatas, new MaintenceAdapter.IViewHolderClicks() {
             @Override
             public void onToolClick(MaintenceDataSAvingVErsion v, int pos) {
 
@@ -152,7 +188,7 @@ public class MaintenceActivity extends HappyCompatActivity {
 
 
         });
-        naqsheadaptor = new NaqsheAdapter(context, naqsheDatas, new NaqsheAdapter.IViewHolderClicks() {
+        naqsheadaptor = new NaqsheAdapter(context, naqsheDatas,textSize, new NaqsheAdapter.IViewHolderClicks() {
             @Override
             public void onImageClick(String image, int pos) {
                 if (image != null)

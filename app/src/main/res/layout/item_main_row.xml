@@ -25,13 +25,13 @@
             <TextView
                 android:id="@+id/titlef"
                 android:layout_width="match_parent"
-                android:layout_height="27dp"
+                android:layout_height="30dp"
                 android:paddingTop="1dp"
                 android:paddingRight="5dp"
                 android:paddingBottom="5dp"
                 android:text="جستجوی پیشرفته"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,6 +43,7 @@
                 android:paddingRight="@dimen/activity_horizontal_margin">
 
                 <TextView
+                    android:id="@+id/titleTypeCar"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="10dp"
@@ -50,7 +51,7 @@
                     android:layout_weight="0.5"
                     android:text="نوع ماشین را انتخاب کنید:"
                     android:textColor="@color/colorAccent"
-                    android:textSize="15dp" />
+                   />
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
@@ -64,7 +65,7 @@
                     <fr.ganfra.materialspinner.MaterialSpinner
                         android:id="@+id/spinner3"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
                         android:layout_margin="0dp"
                         android:background="@color/whaite"
@@ -78,11 +79,11 @@
                         app:ms_hintTextSize="11sp"
                         app:ms_isRtl="true"
                         app:ms_multiline="false"
-                        app:ms_thickness="0.0dp"
-                        />
+                        app:ms_thickness="0.0dp" />
                 </android.support.v7.widget.CardView>
 
                 <TextView
+                    android:id="@+id/titleToolsType"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="10dp"
@@ -90,7 +91,7 @@
                     android:layout_weight="0.5"
                     android:text="نوع کالا را انتخاب کنید:"
                     android:textColor="@color/colorAccent"
-                    android:textSize="15dp" />
+                   />
 
                 <android.support.v7.widget.CardView
                     android:layout_width="match_parent"
@@ -104,7 +105,7 @@
                     <fr.ganfra.materialspinner.MaterialSpinner
                         android:id="@+id/spinner1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
                         android:layout_margin="0dp"
                         android:background="@color/whaite"
@@ -147,6 +148,7 @@
                 <!--</android.support.v7.widget.CardView>-->
 
                 <TextView
+                    android:id="@+id/titleYearCar"
                     android:layout_width="match_parent"
                     android:layout_height="0dp"
                     android:layout_marginLeft="10dp"
@@ -154,7 +156,7 @@
                     android:layout_weight="0.5"
                     android:text="سال خودرو را انتخاب کنید:"
                     android:textColor="@color/colorAccent"
-                    android:textSize="15dp" />
+                     />
 
                 <android.support.v7.widget.CardView
                     android:id="@+id/prdouctYear"
@@ -169,7 +171,7 @@
                     <fr.ganfra.materialspinner.MaterialSpinner
                         android:id="@+id/spinner4"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:layout_gravity="center_vertical"
                         android:layout_margin="0dp"
                         android:background="@color/whaite"
@@ -231,9 +233,11 @@
 
 
                         <TextView
+                            android:id="@+id/serchBtnText"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="جستجو"
+                            android:textAlignment="center"
                             android:textColor="@color/whaite"
                             android:textSize="20dp" />
 
@@ -262,18 +266,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/titleSrchByCode"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:padding="3dp"
                 android:text="جستجو بر اساس کد کالا"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+                 />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -314,7 +319,7 @@
                     android:paddingLeft="5dp"
                     android:text="1660"
                     android:textColor="@color/dark_gray"
-                    android:textSize="18dp" />
+                     />
             </LinearLayout>
 
         </LinearLayout>
@@ -333,18 +338,19 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_margin="10dp"
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/titleSrchByName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:padding="3dp"
                 android:text="جستجو بر اساس نام کالا"
                 android:textColor="@color/black"
-                android:textSize="15sp" />
+               />
 
             <LinearLayout
                 android:layout_width="match_parent"

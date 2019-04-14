@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.gson.Gson;
@@ -41,13 +42,15 @@ public class Basket extends HappyCompatActivity {
 
     @BindView(R.id.finalOrder)
     Button finalOrder;
-
+    TextView title;
+    float textSize;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_basket);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        title = (TextView) findViewById(R.id.title);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -63,13 +66,45 @@ public class Basket extends HappyCompatActivity {
         core = new Core(this);
         basketDatas = new LinkedList<>();
         Intent fromIntent = getIntent();
+        float density = getResources().getDisplayMetrics().density;
 
+        if (density == 0.75f) {
+            // LDPI
+            title.setTextSize(4 * getResources().getDisplayMetrics().density);
+            textSize = 4 * getResources().getDisplayMetrics().density;
+
+        } else if (density >= 1.0f && density < 1.5f) {
+            // MDPI
+            title.setTextSize(4 * getResources().getDisplayMetrics().density);
+            textSize = 4 * getResources().getDisplayMetrics().density;
+
+        } else if (density == 1.5f) {
+            // HDPI
+            title.setTextSize(5 * getResources().getDisplayMetrics().density);
+            textSize = 5 * getResources().getDisplayMetrics().density;
+
+        } else if (density > 1.5f && density <= 2.0f) {
+            // XHDPI
+            title.setTextSize(5 * getResources().getDisplayMetrics().density);
+            textSize = 5 * getResources().getDisplayMetrics().density;
+
+        } else if (density > 2.0f && density <= 3.0f) {
+            // XXHDPI
+            title.setTextSize(6 * getResources().getDisplayMetrics().density);
+            textSize = 6 * getResources().getDisplayMetrics().density;
+
+        } else {
+            // XXXHDPI
+            title.setTextSize(7 * getResources().getDisplayMetrics().density);
+            textSize = 7 * getResources().getDisplayMetrics().density;
+
+        }
 
 
         if (fromIntent.hasExtra("from")) {
 
 
-            adaptor = new BasketAdapter(this, basketDatas, 1, new BasketAdapter.IViewHolderClicks() {
+            adaptor = new BasketAdapter(this, basketDatas, 1,textSize, new BasketAdapter.IViewHolderClicks() {
                 @Override
                 public void onTextClick(CategoryData v, int pos) {
 
@@ -81,12 +116,29 @@ public class Basket extends HappyCompatActivity {
                     basketDatas.remove(tools);
                     adaptor.notifyDataSetChanged();
                 }
+
+                @Override
+                public void minusCount(BasketData tools, int pos) {
+
+                    tools.setChoosenCountMaintence(String.valueOf(Integer.parseInt(tools.getChoosenCountMaintence()) - 1));
+                    core.setNewCountProduct(tools.getChoosenCode(), Integer.parseInt(tools.getChoosenCountMaintence()));
+                    adaptor.notifyDataSetChanged();
+                }
+
+                @Override
+                public void plusCount(BasketData tools, int pos) {
+
+                    tools.setChoosenCountMaintence(String.valueOf(Integer.parseInt(tools.getChoosenCountMaintence()) + 1));
+                    core.setNewCountProduct(tools.getChoosenCode(), Integer.parseInt(tools.getChoosenCountMaintence()));
+                    adaptor.notifyDataSetChanged();
+
+                }
             });
             localBasket();
 
         } else {
             finalOrder.setVisibility(View.GONE);
-            adaptor = new BasketAdapter(this, basketDatas, 0, new BasketAdapter.IViewHolderClicks() {
+            adaptor = new BasketAdapter(this, basketDatas, 0,textSize, new BasketAdapter.IViewHolderClicks() {
                 @Override
                 public void onTextClick(CategoryData v, int pos) {
 
@@ -94,6 +146,16 @@ public class Basket extends HappyCompatActivity {
 
                 @Override
                 public void deletOrder(BasketData tools, int pos) {
+
+                }
+
+                @Override
+                public void minusCount(BasketData tools, int pos) {
+
+                }
+
+                @Override
+                public void plusCount(BasketData tools, int pos) {
 
                 }
             });
@@ -192,9 +254,9 @@ public class Basket extends HappyCompatActivity {
             object.addProperty("countTools", String.valueOf(!basketDatas.get(i).getChoosenCountMaintence().equals("0") ? basketDatas.get(i).getChoosenCountMaintence() : 1));
 
             if (!jsonArray.contains(object))
-                jsonArray.add(object.get("codeTools"));
+                jsonArray.add(object.get("codeTools").getAsInt());
 
-            codeArray.add(object.get("countTools"));
+            codeArray.add(object.get("countTools").getAsInt());
         }
         if (id == R.id.finalOrder) {
             JsonObject jsonObject = new JsonObject();
@@ -213,6 +275,7 @@ public class Basket extends HappyCompatActivity {
                         showProgress(false);
 //                       EventBus.getDefault().post(new EventGoBackToMain());
                         showToast(Basket.this, "لیست سفارش خود را از منو مشاهده کنید.");
+                        core.deletAllBasket();
                         Intent intent = new Intent(Basket.this, Basket.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                         startActivity(intent);

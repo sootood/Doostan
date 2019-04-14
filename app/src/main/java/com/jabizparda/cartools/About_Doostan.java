@@ -51,7 +51,7 @@ public class About_Doostan extends HappyCompatActivity {
             // do reading, usually loop until end of file reading
             String mLine;
             while ((mLine = reader.readLine()) != null) {
-                text.append(mLine);
+                text.append(Core.toPersianStatic(mLine));
                 text.append('\n');
             }
         } catch (IOException e) {

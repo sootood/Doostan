@@ -26,6 +26,7 @@
         android:gravity="center"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:typeface="sans"
         android:text="صنایع خودرویی دوستان"
         android:layout_gravity="center"
         android:layout_width="match_parent"
@@ -50,8 +51,8 @@
         ext:documentView_reverse="true"
         ext:documentView_textFormat="formatted"
         ext:documentView_textAlignment="justified"
-        ext:documentView_textColor="@color/dark_gray"
-        ext:documentView_textSize="12sp"
+        ext:documentView_textColor="@color/black"
+        ext:documentView_textSize="16sp"
         />
 
 </LinearLayout>

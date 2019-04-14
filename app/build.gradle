@@ -17,7 +17,6 @@ android {
             storePassword "13730104se"
             keyAlias "sootood"
             keyPassword "13730104se"
-
         }
 
     }

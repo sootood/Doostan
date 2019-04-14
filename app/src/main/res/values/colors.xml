@@ -10,4 +10,7 @@
     <color name="light_grey">#e9eaeb</color>
     <color name="t_lg">#f9f9f9</color>
     <color name="colorAccentTranse">#8119aa28</color>
+    <color name="red_label">#c62828</color>
+
+
 </resources>

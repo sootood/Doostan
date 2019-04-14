@@ -151,9 +151,16 @@ public class Core {
     public void deleteToolFromBasket(String codeTools) {
         AppDatabase.getAppDatabase(context.getApplicationContext()).boughtToolsDoa().deleteOnce(codeTools);
     }
+    public void deletAllBasket() {
+        AppDatabase.getAppDatabase(context.getApplicationContext()).boughtToolsDoa().deleteAll();
+    }
 
     public Integer getBasketCount() {
       return  AppDatabase.getAppDatabase(context.getApplicationContext()).boughtToolsDoa().countBought();
+    }
+
+    public void setNewCountProduct(String code, int countCahnged) {
+          AppDatabase.getAppDatabase(context.getApplicationContext()).boughtToolsDoa().changeCountValue(code,countCahnged);
     }
 
     public List<BoughtToolsData> getAllbasket() {

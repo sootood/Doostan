@@ -14,20 +14,10 @@
     <ImageView
         android:id="@+id/logo"
         android:layout_centerInParent="true"
-        android:src="@mipmap/ic_launcher"
-        android:layout_width="96dp"
-        android:layout_height="96dp" />
-    <TextView
-        android:layout_centerHorizontal="true"
-        android:textAlignment="center"
-        android:layout_marginTop="5dp"
-        android:textColor="@android:color/white"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:layout_below="@id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="دوستان، ندای امنیت"/>
+        android:src="@drawable/logo_dostan"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
 
 
 </RelativeLayout>

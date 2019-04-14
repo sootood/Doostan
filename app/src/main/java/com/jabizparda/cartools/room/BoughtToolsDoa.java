@@ -25,6 +25,9 @@ public interface BoughtToolsDoa {
     @Query("DELETE FROM bought_tbl WHERE flProductCode= :code")
     void deleteOnce(String code);
 
+    @Query("UPDATE bought_tbl SET fldCount=:count WHERE flProductCode= :code")
+    void changeCountValue(String code, int count);
+
     @Insert(onConflict = REPLACE)
     void insertAll(BoughtToolsData... boughtToolsDatas);
 
@@ -33,6 +36,8 @@ public interface BoughtToolsDoa {
 
     @Insert(onConflict = REPLACE)
     void insertAll(List<BoughtToolsData> boughtToolsDatas);
+
+
 
     @Query("SELECT COUNT(*) from bought_tbl")
     int countBought();

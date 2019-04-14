@@ -31,14 +31,16 @@ public class BasketAdapter extends RecyclerView.Adapter<BasketAdapter.ViewHolder
     private BasketAdapter.IViewHolderClicks listener;
     int type;
     Core core;
+    float textSize;
 
-    public BasketAdapter(Context context, LinkedList<BasketData> loads,int type,BasketAdapter.IViewHolderClicks itemClickListner) {
+    public BasketAdapter(Context context, LinkedList<BasketData> loads,int type,float textSize,BasketAdapter.IViewHolderClicks itemClickListner) {
         this.context = context;
         this.loads = loads;
         this.type=type;
         listener = itemClickListner;
         Logger.d(loads);
         core = new Core(context);
+        this.textSize=textSize;
 
     }
 
@@ -47,6 +49,8 @@ public class BasketAdapter extends RecyclerView.Adapter<BasketAdapter.ViewHolder
         public TextView textName, textPrice, textCategory, txtCode, carGroup, countPak;
         public CardView cardbasket;
         public ImageButton closeBtn;
+        public ImageButton minusBtn;
+        public ImageButton plusBtn;
 
         public ViewHolder(View view) {
             super(view);
@@ -57,6 +61,9 @@ public class BasketAdapter extends RecyclerView.Adapter<BasketAdapter.ViewHolder
             cardbasket = (CardView) view.findViewById(R.id.cardBasket);
             countPak = (TextView) view.findViewById(R.id.countPak);
             closeBtn = (ImageButton) view.findViewById(R.id.cancelImage);
+            minusBtn = (ImageButton) view.findViewById(R.id.minusBtnImg);
+            plusBtn = (ImageButton) view.findViewById(R.id.plusBtnImg);
+
         }
     }
 
@@ -75,10 +82,23 @@ public class BasketAdapter extends RecyclerView.Adapter<BasketAdapter.ViewHolder
     public void onBindViewHolder(final ViewHolder viewHolder, final int position) {
         final BasketData data = loads.get(position);
 
-        if (type==1)
+        viewHolder.textName.setTextSize(textSize);
+        viewHolder.textPrice.setTextSize(textSize);
+        viewHolder.txtCode.setTextSize(textSize);
+        viewHolder.countPak.setTextSize(textSize);
+
+        if (type==1){
             viewHolder.closeBtn.setVisibility(View.VISIBLE);
-        if (type==1 && position == 0)
+            viewHolder.plusBtn.setVisibility(View.VISIBLE);
+            viewHolder.minusBtn.setVisibility(View.VISIBLE);
+        }
+
+        if (type==1 && position == 0){
             viewHolder.closeBtn.setVisibility(View.INVISIBLE);
+            viewHolder.plusBtn.setVisibility(View.GONE);
+            viewHolder.minusBtn.setVisibility(View.GONE);
+        }
+
 
         if(position == 0){
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -105,6 +125,22 @@ public class BasketAdapter extends RecyclerView.Adapter<BasketAdapter.ViewHolder
                 listener.deletOrder(data,position);
             }
         });
+
+        viewHolder.plusBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                listener.plusCount(data,position);
+            }
+        });
+        viewHolder.minusBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                listener.minusCount(data,position);
+
+            }
+        });
     }
 
     @Override
@@ -115,5 +151,7 @@ public class BasketAdapter extends RecyclerView.Adapter<BasketAdapter.ViewHolder
     public interface IViewHolderClicks {
         void onTextClick(CategoryData v, int pos);
         void deletOrder(BasketData tools,int pos);
+        void minusCount(BasketData tools,int pos);
+        void plusCount(BasketData tools,int pos);
     }
 }

@@ -29,11 +29,13 @@ public class NaqsheAdapter extends RecyclerView.Adapter<NaqsheAdapter.ViewHolder
     private Context context;
     private List<NaqsheSokhtData> loads;
     private NaqsheAdapter.IViewHolderClicks listener;
+    float textSize;
 
-    public NaqsheAdapter(Context context, List<NaqsheSokhtData> load, NaqsheAdapter.IViewHolderClicks itemClickListner) {
+    public NaqsheAdapter(Context context, List<NaqsheSokhtData> load,float textSize, NaqsheAdapter.IViewHolderClicks itemClickListner) {
         this.context = context;
         this.loads = load;
         listener = itemClickListner;
+        this.textSize=textSize;
 
     }
 
@@ -51,6 +53,7 @@ public class NaqsheAdapter extends RecyclerView.Adapter<NaqsheAdapter.ViewHolder
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final NaqsheSokhtData data = loads.get(position);
         holder.nameMaintence.setText(data.getTitleTool()==null ? "نا معلوم" : Core.toPersianStatic( String.valueOf(data.getTitleTool())));
+        holder.nameMaintence.setTextSize(textSize);
         if (data.getImageTool()!=null){
             Glide.with(context).load(data.getImageTool())
                     .thumbnail(Glide.with(context).load(R.drawable.llyj))

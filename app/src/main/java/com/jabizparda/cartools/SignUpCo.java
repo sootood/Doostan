@@ -126,6 +126,17 @@ public class SignUpCo extends HappyCompatActivity implements LoaderCallbacks<Cur
         linkedProvince= new ArrayList<>();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SignUpCo.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+                startActivity(intent);
+                finish();
+            }
+        });
         ButterKnife.bind(this);
         core= new Core(this);
         spinnerZone.setHintColor(getResources().getColor(R.color.black));
@@ -513,14 +524,14 @@ public class SignUpCo extends HappyCompatActivity implements LoaderCallbacks<Cur
         return password.length() == 10;
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        Intent intent= new Intent(SignUpCo.this,MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
-        startActivity(intent);
-        finish();
-    }
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        Intent intent= new Intent(SignUpCo.this,MainActivity.class);
+//        intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+//        startActivity(intent);
+//        finish();
+//    }
 
     /**
      * Shows the progress UI and hides the login form.
@@ -712,11 +723,11 @@ public class SignUpCo extends HappyCompatActivity implements LoaderCallbacks<Cur
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.back_menu, menu);
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.back_menu, menu);
+//        return true;
+//    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

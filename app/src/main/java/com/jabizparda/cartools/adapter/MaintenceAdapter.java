@@ -33,13 +33,15 @@ public class MaintenceAdapter extends RecyclerView.Adapter<MaintenceAdapter.View
     private IViewHolderClicks listener;
     ArrayList<Integer> itemSelected;
     private List<Model> mModelList;
+    float textSize;
 
-    public MaintenceAdapter(List<Model> modelList, Context context, List<MaintenceDataSAvingVErsion> loads
+    public MaintenceAdapter(List<Model> modelList,float textSize, Context context, List<MaintenceDataSAvingVErsion> loads
             , IViewHolderClicks itemClickListner) {
         this.context = context;
         this.loads = loads;
         listener = itemClickListner;
         mModelList = modelList;
+        this.textSize = textSize;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
@@ -48,6 +50,10 @@ public class MaintenceAdapter extends RecyclerView.Adapter<MaintenceAdapter.View
         TextView pricemaintence;
         TextView typemaintence;
         TextView countMaintence;
+        TextView titleBox;
+        TextView titleType;
+        TextView titleCar;
+
         LabelImageView imageMaintence;
         CardView cardView;
         CardView cardPrice;
@@ -65,6 +71,9 @@ public class MaintenceAdapter extends RecyclerView.Adapter<MaintenceAdapter.View
             cardView = (CardView) view.findViewById(R.id.cardMaintence);
             llCArd = (LinearLayout) view.findViewById(R.id.llCard);
             cardPrice = (CardView) view.findViewById(R.id.cardPrice);
+            titleBox = (TextView) view.findViewById(R.id.titleBox);
+            titleType = (TextView) view.findViewById(R.id.titleType);
+            titleCar = (TextView) view.findViewById(R.id.titleCar);
         }
     }
 
@@ -86,6 +95,15 @@ public class MaintenceAdapter extends RecyclerView.Adapter<MaintenceAdapter.View
         final Model model = mModelList.get(position);
         Logger.d(data);
         Logger.e(String.valueOf(position));
+        viewHolder.carCategory.setTextSize(textSize);
+        viewHolder.nameMaintence.setTextSize(textSize);
+        viewHolder.pricemaintence.setTextSize(textSize);
+        viewHolder.typemaintence.setTextSize(textSize);
+        viewHolder.countMaintence.setTextSize(textSize);
+        viewHolder.titleBox.setTextSize(textSize);
+        viewHolder.titleType.setTextSize(textSize);
+        viewHolder.titleCar.setTextSize(textSize);
+
         viewHolder.typemaintence.setText(Core.toPersianStatic(String.valueOf(data.getCarCategory())));
         viewHolder.nameMaintence.setText(data.getNameMaintence() == null ? "نا معلوم" : Core.toPersianStatic(String.valueOf(data.getNameMaintence())));
         if (data.getPricemaintence() == null) {
@@ -97,6 +115,7 @@ public class MaintenceAdapter extends RecyclerView.Adapter<MaintenceAdapter.View
         viewHolder.cardView.setBackgroundColor(model.isSelected() ? ContextCompat.getColor(context, R.color.colorAccentLight) : Color.WHITE);
         viewHolder.countMaintence.setText(Core.toPersianStatic(String.valueOf(data.getCountMaintence())));
         viewHolder.carCategory.setText(Core.toPersianStatic(String.valueOf(data.getTypeMaintence())));
+
         Logger.d(data.getImageMaintence());
         if (data.getImageMaintence() != null) {
 
@@ -116,6 +135,7 @@ public class MaintenceAdapter extends RecyclerView.Adapter<MaintenceAdapter.View
         }
 
         viewHolder.imageMaintence.setLabelText(Core.toPersianStatic(data.getCodeMaintence() == null ? "نامشخص" : String.valueOf(data.getCodeMaintence())));
+        viewHolder.imageMaintence.setLabelTextSize((int)(textSize*1.5));
 
         viewHolder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override

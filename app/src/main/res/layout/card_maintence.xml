@@ -50,7 +50,7 @@
                     android:minWidth="200dp"
                     android:background="@color/transparent"
                     android:scaleType="centerInside"
-                    app:label_backgroundColor="@color/colorAccent"
+                    app:label_backgroundColor="@color/red_label"
                     app:label_orientation="RIGHT_TOP"
                     app:label_text=""
                     />
@@ -87,6 +87,7 @@
                             <!--android:layout_height="wrap_content"-->
                             <!--/>-->
                         <TextView
+                            android:id="@+id/titleCar"
                             android:layout_width="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
@@ -118,6 +119,7 @@
                             <!--android:layout_height="wrap_content"-->
                             <!--/>-->
                         <TextView
+                            android:id="@+id/titleType"
                             android:textSize="12sp"
                             android:paddingRight="5sp"
                             android:gravity="center"
@@ -143,6 +145,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/titleBox"
                             android:textSize="12sp"
                             android:paddingRight="5sp"
                             android:gravity="center"
@@ -153,13 +156,15 @@
                         <TextView
                             android:gravity="center"
                             android:textSize="10sp"
-                            android:textColor="@color/whaite"
+                            android:textColor="@color/black"
                             android:id="@+id/countMaintence"
                             android:layout_margin="5dp"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
                             android:layout_gravity="center"
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
-                            android:background="@color/colorAccent"/>
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@color/light_grey"/>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>

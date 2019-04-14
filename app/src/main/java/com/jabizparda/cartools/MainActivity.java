@@ -143,6 +143,7 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
     private List<Model> mModelList;
     List<Integer> carCategorys, typecategory;
     TextView title;
+    float textSize;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -153,8 +154,41 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
         ButterKnife.bind(this);
         core = new Core(this);
         title = (TextView) findViewById(R.id.title);
-//        title.setTextSize((float) (0.027 * getResources().getDisplayMetrics().widthPixels));
-//        Logger.d(0.025 * getResources().getDisplayMetrics().widthPixels);
+        Logger.d(getResources().getDisplayMetrics().heightPixels);
+
+        float density = getResources().getDisplayMetrics().density;
+
+        if (density == 0.75f) {
+            // LDPI
+            title.setTextSize(4 * getResources().getDisplayMetrics().density);
+            textSize = 4 * getResources().getDisplayMetrics().density;
+
+        } else if (density >= 1.0f && density < 1.5f) {
+            // MDPI
+            title.setTextSize(4 * getResources().getDisplayMetrics().density);
+            textSize = 4 * getResources().getDisplayMetrics().density;
+
+        } else if (density == 1.5f) {
+            // HDPI
+            title.setTextSize(5 * getResources().getDisplayMetrics().density);
+            textSize = 5 * getResources().getDisplayMetrics().density;
+
+        } else if (density > 1.5f && density <= 2.0f) {
+            // XHDPI
+            title.setTextSize(5 * getResources().getDisplayMetrics().density);
+            textSize = 5 * getResources().getDisplayMetrics().density;
+
+        } else if (density > 2.0f && density <= 3.0f) {
+            // XXHDPI
+            title.setTextSize(6 * getResources().getDisplayMetrics().density);
+            textSize = 6 * getResources().getDisplayMetrics().density;
+
+        } else {
+            // XXXHDPI
+            title.setTextSize(7 * getResources().getDisplayMetrics().density);
+            textSize = 7 * getResources().getDisplayMetrics().density;
+
+        }
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN | WindowManager.LayoutParams.SOFT_INPUT_STATE_HIDDEN);
         carCategorys = new ArrayList<>();
         typecategory = new ArrayList<>();
@@ -218,14 +252,41 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
 
                         break;
                     case 1:
-                        view = LayoutInflater.from(getBaseContext()).inflate(R.layout.item_main_row, null, false);
+                        if (getResources().getDisplayMetrics().heightPixels < 1920)
+                            view = LayoutInflater.from(getBaseContext()).inflate(R.layout.image_two, null, false);
+                        else
+                            view = LayoutInflater.from(getBaseContext()).inflate(R.layout.item_main_row, null, false);
                         spinner3 = view.findViewById(R.id.spinner3);
                         spinner4 = view.findViewById(R.id.spinner4);
                         spinner1 = view.findViewById(R.id.spinner1);
+                        TextView titleFCard = view.findViewById(R.id.titlef);
+                        TextView titleTypeCar = view.findViewById(R.id.titleTypeCar);
+                        TextView titleYearCar = view.findViewById(R.id.titleYearCar);
+                        TextView titleToolsType = view.findViewById(R.id.titleToolsType);
+                        TextView titleSrchByCode = view.findViewById(R.id.titleSrchByCode);
+                        TextView titleSrchByName = view.findViewById(R.id.titleSrchByName);
+                        TextView searchBtnText = view.findViewById(R.id.serchBtnText);
+
+                        TextView codeSearch = view.findViewById(R.id.codeSearch);
+                        TextView wordSearch = view.findViewById(R.id.wordSearch);
                         final AutoCompleteTextView word = view.findViewById(R.id.autoCompName);
                         final AutoCompleteTextView code = view.findViewById(R.id.autoCompCode);
                         TextView textCode = (TextView) view.findViewById(R.id.staticCode);
                         textCode.setText("1660");
+                        titleFCard.setTextSize(textSize);
+                        spinner1.setArrowSize(textSize);
+                        titleTypeCar.setTextSize(textSize);
+                        titleToolsType.setTextSize(textSize);
+                        titleYearCar.setTextSize(textSize);
+                        titleSrchByCode.setTextSize(textSize);
+                        titleSrchByName.setTextSize(textSize);
+                        codeSearch.setTextSize(textSize);
+                        wordSearch.setTextSize(textSize);
+                        textCode.setTextSize(textSize);
+                        searchBtnText.setTextSize(textSize);
+                        word.setTextSize(textSize);
+                        code.setTextSize(textSize);
+
                         final int[] catI = new int[1];
                         final long[] carI = new long[1];
                         final int[] yearI = new int[1];
@@ -709,7 +770,7 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
     public void allTools(final RecyclerView rv) {
 
 
-        maintenceAll = new MaintenceAdapter(getListData(), MainActivity.this, maiitenceDataVS, new MaintenceAdapter.IViewHolderClicks() {
+        maintenceAll = new MaintenceAdapter(getListData(),textSize ,MainActivity.this, maiitenceDataVS, new MaintenceAdapter.IViewHolderClicks() {
             @Override
             public void onToolClick(MaintenceDataSAvingVErsion v, int pos) {
 
@@ -931,6 +992,10 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
         builder.setView(view);
         final CardView faCard = (CardView) view.findViewById(R.id.persianCard);
         final CardView enCard = (CardView) view.findViewById(R.id.engCard);
+        final TextView faText = (TextView) view.findViewById(R.id.text2);
+        final TextView enText = (TextView) view.findViewById(R.id.text1);
+        faText.setText(Core.toPersianStatic("02166506038"));
+        enText.setText(Core.toPersianStatic("02166506037"));
         final Resources res = getApplicationContext().getResources();
         final DisplayMetrics dm = res.getDisplayMetrics();
 
@@ -939,13 +1004,18 @@ public class MainActivity extends HappyCompatActivity implements NavigationView.
             @Override
             public void onClick(View view) {
 
-
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + "02166506037"));
+                startActivity(intent);
             }
         });
         view.findViewById(R.id.engCard).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:" + "02166506037"));
+                startActivity(intent);
 
             }
         });

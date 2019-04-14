@@ -66,15 +66,44 @@
                 android:gravity="center"
                 android:text="120000" />
 
-            <TextView
-                android:id="@+id/countPak"
+
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
                 android:layout_weight="0.8"
-                android:gravity="center"
-                android:text="120000" />
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
+                <ImageButton
+                    android:id="@+id/plusBtnImg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_add"
+                    android:visibility="gone"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"/>
+                <TextView
+                    android:id="@+id/countPak"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.6"
+                    android:gravity="center"
+                    android:text="120000" />
+                <ImageButton
+                    android:id="@+id/minusBtnImg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_substract"
+                    android:visibility="gone"
+                    android:scaleType="fitCenter"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
             <!--<TextView-->
             <!--android:id="@+id/carGroup"-->
             <!--android:text="120000"-->
